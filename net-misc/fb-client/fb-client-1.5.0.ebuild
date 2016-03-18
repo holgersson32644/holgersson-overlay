@@ -4,19 +4,14 @@
 
 EAPI=6
 
-inherit eutils git-r3
+inherit eutils
 
 DESCRIPTION="Client for paste.xinu.at"
 HOMEPAGE="https://paste.xinu.at"
-EGIT_REPO_URI="git://git.server-speed.net/users/flo/fb"
+SRC_URI="https://paste.xinu.at/data/client/fb-${PV}.tar.gz -> fb-client-${PVR}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~x86 ~amd64"
 
-src_unpack() {
-	git-r3_src_unpack
-}
-
-src_compile() {
-	emake
-}
+S="${WORKDIR}/fb-${PV}"
