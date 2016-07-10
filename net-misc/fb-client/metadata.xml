@@ -5,4 +5,7 @@
 		<email>nils.freydank@posteo.de</email>
 		<name>Holgersson</name>
 	</maintainer>
+	<use>
+		<flag name="clipboard">Support writing to X clipboard via x11-misc/xclip</flag>
+	</use>
 </pkgmetadata>
