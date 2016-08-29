@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ubuntu-font-family-0.80.ebuild,v 1.4 2013/01/21 20:03:56 steev Exp $
+# $Header: $
 
 EAPI=6
 
@@ -12,7 +12,7 @@ SRC_URI="http://pixelambacht.nl/downloads/SansBullshitSans.ttf"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 arm ~arm64 ppc ppc64 x86"
+KEYWORDS="~*"
 IUSE=""
 
 S="${WORKDIR}"
