@@ -4,6 +4,8 @@
 
 EAPI=6
 
+PYTHON_COMPAT=( python3_{4,5} )
+
 inherit eutils
 
 DESCRIPTION="Client for paste.xinu.at"

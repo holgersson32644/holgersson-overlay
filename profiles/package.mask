@@ -1,3 +1,0 @@
-# Nils Freydank <nils.freydank@posteo.de> (10 Jul 2016)
-# Mask old versions
-<net-misc/fb-client-2.0
