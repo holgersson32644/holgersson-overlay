@@ -7,7 +7,6 @@ inherit git-r3
 # TODO:
 # unbundle zlib
 # set LICENSE only for the engine or for game-data, too in *this* ebuild?
-# fix USE="-altgamma"
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://urbanterror.info"
@@ -116,11 +115,20 @@ pkg_postinst() {
 			elog "in your ~/.q3a/q3ut4/q3config.cfg for openal to work."
 			einfo
 		fi
-		if use altgamma ; then
+		if use altgamma; then
 			einfo
 			elog "You might need to set:"
 			elog "  seta r_altgamma \"1\""
 			elog "in your ~/.q3a/q3ut4/q3config.cfg for altgamma to work."
+			einfo
+		fi
+		if ! use altgamma; then
+			einfo
+			elog "If you are using a modesetting graphics driver you might"
+			elog "consider setting USE=\"altgamma\"."
+			elog "For details take a look on:"
+			elog "https://bugs.freedesktop.org/show_bug.cgi?id=27222"
+			einfo
 		fi
 	fi
 }
