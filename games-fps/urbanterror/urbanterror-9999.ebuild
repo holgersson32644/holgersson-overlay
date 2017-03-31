@@ -82,7 +82,7 @@ src_compile() {
 		USE_INTERNAL_LIBS=0 \
 		USE_INTERNAL_ZLIB=1 \
 		USE_LOCAL_HEADERS=0 \
-		USE_ALTGAMMA=1
+		USE_ALTGAMMA=$(buildit altgamma)
 }
 
 src_install() {
