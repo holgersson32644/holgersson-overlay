@@ -2,11 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit git-r3
-
-# TODO:
-# unbundle zlib
-# set LICENSE only for the engine or for game-data, too in *this* ebuild?
+inherit flag-o-matic git-r3
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://urbanterror.info"
@@ -35,10 +31,10 @@ RDEPEND="
 		opus? ( media-libs/opusfile )
 		mumble? ( media-sound/mumble )
 		)
-	~games-fps/urbanterror-data-4.3.2"
+	~games-fps/urbanterror-data-4.3.2
+	sys-libs/zlib[minizip]"
 DEPEND="${RDEPEND}
-	dedicated? ( curl? ( net-misc/curl ) )
-	"
+	dedicated? ( curl? ( net-misc/curl ) )"
 
 pkg_pretend() {
 	if ! use dedicated ; then
@@ -53,6 +49,8 @@ pkg_pretend() {
 src_compile() {
 	buildit() { use $1 && echo 1 || echo 0 ; }
 	nobuildit() { use $1 && echo 0 || echo 1 ; }
+	# unbundle zlib as much as possible
+	append-flags "-DOF=_Z_OF"
 	emake \
 		ARCH=$(usex amd64 "x86_64" "i386") \
 		DEFAULT_BASEDIR="/usr/share/urbanterror" \
@@ -80,7 +78,6 @@ src_compile() {
 		USE_MUMBLE=$(buildit mumble) \
 		USE_VOIP=$(buildit voip) \
 		USE_INTERNAL_LIBS=0 \
-		USE_INTERNAL_ZLIB=1 \
 		USE_LOCAL_HEADERS=0 \
 		USE_ALTGAMMA=$(buildit altgamma)
 }
