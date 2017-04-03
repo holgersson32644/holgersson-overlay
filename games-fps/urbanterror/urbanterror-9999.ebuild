@@ -16,7 +16,7 @@ EGIT_BRANCH="urt"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+altgamma +curl debug dedicated mumble openal +opus server +sdl vorbis"
+IUSE="+altgamma +curl debug dedicated mumble openal +opus server +sdl voip vorbis"
 PATCHES=(
 	"${FILESDIR}"/${P}-respect_CFLAGS.patch
 )
@@ -65,20 +65,20 @@ src_compile() {
 		BUILD_STANDALONE=1 \
 		SERVERBIN="Quake3-UrT-Ded" \
 		CLIENTBIN="Quake3-UrT" \
-		USE_RENDERER_DLOPEN=0 \
+		USE_RENDERER_DLOPEN=1 \
 		USE_YACC=0 \
 		BASEGAME="q3ut4"\
 		BASEGAME_CFLAGS="${CFLAGS}" \
 		USE_SDL=$(buildit sdl) \
 		USE_SDL_DLOPEN=$(buildit sdl) \
 		USE_OPENAL=$(buildit openal) \
-		USE_OPENAL_DLOPEN=0 \
+		USE_OPENAL_DLOPEN=1 \
 		USE_CURL=$(buildit curl) \
-		USE_CURL_DLOPEN=0 \
+		USE_CURL_DLOPEN=1 \
 		USE_CODEC_VORBIS=$(buildit vorbis) \
 		USE_CODEC_OPUS=$(buildit opus) \
 		USE_MUMBLE=$(buildit mumble) \
-		USE_VOIP=0 \
+		USE_VOIP=$(buildit voip) \
 		USE_INTERNAL_LIBS=0 \
 		USE_INTERNAL_ZLIB=1 \
 		USE_LOCAL_HEADERS=0 \
