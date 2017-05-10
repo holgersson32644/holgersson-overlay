@@ -7,5 +7,5 @@
 # Masking for removal in 30d
 # The ebuilds will get merged into the main tree.
 =games-fps/urbanterror-9999
-=games-fps/urbanterror-4.3.2_p20170426.tar.gz
+=games-fps/urbanterror-4.3.2_p20170426
 =games-fps/urbanterror-data-4.3.2
