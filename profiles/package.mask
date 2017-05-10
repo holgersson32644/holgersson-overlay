@@ -2,3 +2,10 @@
 # Masking for removal in 30d
 # I won't maintain it any longer and the ebuild is outdated.
 =dev-libs/wiringpi-9999
+
+# Nils "holgersson" Freydank <holgersson@posteo.de> (10 May 2017)
+# Masking for removal in 30d
+# The ebuilds will get merged into the main tree.
+=games-fps/urbanterror-9999
+=games-fps/urbanterror-4.3.2_p20170426.tar.gz
+=games-fps/urbanterror-data-4.3.2
