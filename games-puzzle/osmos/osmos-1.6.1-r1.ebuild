@@ -49,7 +49,7 @@ src_install() {
 	fi
 	insinto "/opt/${PN}"
 	doins -r Fonts/ Sounds/ Textures/ Osmos-* *.cfg
-	
+
 	newicon "Icons/256x256.png" "${PN}.png"
 	dodoc readme.html
 
