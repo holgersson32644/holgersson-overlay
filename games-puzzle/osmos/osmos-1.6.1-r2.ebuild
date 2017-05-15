@@ -14,7 +14,7 @@ SRC_URI="${MY_P}.tar.gz"
 
 LICENSE="Hemisphere_Games-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="fetch strip"
 PROPERTIES="interactive"
