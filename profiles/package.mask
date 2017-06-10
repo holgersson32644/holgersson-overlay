@@ -1,8 +1,3 @@
-# Nils "holgersson" Freydank <holgersson@posteo.de> (18 Apr 2017)
-# Masking for removal in 30d
-# I won't maintain it any longer and the ebuild is outdated.
-=dev-libs/wiringpi-9999
-
 # Nils "holgersson" Freydank <holgersson@posteo.de> (10 May 2017)
 # Masking for removal in 30d
 # The ebuilds will get merged into the main tree.
