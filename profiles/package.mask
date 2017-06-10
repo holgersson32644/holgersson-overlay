@@ -1,0 +1,5 @@
+#-------------------------------------------
+# package.mask file for holgersson-overlay
+# syntax:
+# author <email address> (LANG=C date +%d\ %b\ %Y)
+# reason
