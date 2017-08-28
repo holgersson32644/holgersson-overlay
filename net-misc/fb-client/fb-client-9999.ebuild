@@ -7,12 +7,13 @@ PYTHON_COMPAT=( python3_{4,5} )
 
 inherit eutils
 
-if [ "${PV}" == "9999" ]
+if [[ "${PV}" == "9999" ]]
 then
 	inherit git-r3
-	EGIT_REPO_URI="git://git.server-speed.net/users/flo/fb"
+	EGIT_REPO_URI="https://git.server-speed.net/users/flo/fb"
 else
 	SRC_URI="https://paste.xinu.at/data/client/fb-${PV}.tar.gz -> fb-client-${PVR}.tar.gz"
+	S="${WORKDIR}/fb-${PV}"
 fi
 
 DESCRIPTION="Client for paste.xinu.at"
@@ -26,5 +27,3 @@ IUSE="+clipboard"
 RDEPEND="dev-python/pyxdg
 		dev-python/pycurl
 		clipboard? ( x11-misc/xclip )"
-
-S="${WORKDIR}/fb-${PV}"
