@@ -24,6 +24,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="+clipboard"
 
-RDEPEND="dev-python/pyxdg
+RDEPEND="
+		dev-python/pyxdg
 		dev-python/pycurl
-		clipboard? ( x11-misc/xclip )"
+		clipboard? ( x11-misc/xclip )
+"
