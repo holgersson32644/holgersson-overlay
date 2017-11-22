@@ -18,7 +18,7 @@ $ emerge --sync
 You might set `USE="sync-plugin-portage"` for layman, too.
 
 ## Maintainer
-If you encounter Bugs, please send a mail to
+If you encounter bugs, please send a mail to
 ```
 holgersson [ascii-symbol-64] posteo [ascii-symbol-46] de
 ```
@@ -37,7 +37,7 @@ the main Gentoo/portage tree.
   the ebuilds themselves.
 - The licenses are choosen to fit into the main gentoo licenses pool; if you
   suggest other licenses, or think I’m mistaken in the licenses I indicate anywhere
-  please contact the author (see section Maintainer above)!
+  please contact the maintainer (see the resp. section above)!
 
 [holgersson-overlay]: https://git.holgersson.xyz/holgersson-overlay
 [bgo]: https://bugs.gentoo.org
