@@ -9,7 +9,7 @@ MY_PN="Osmos"
 MY_P="${MY_PN}_${PV}"
 
 DESCRIPTION="Play as a single-celled organism absorbing others"
-HOMEPAGE="http://www.hemispheregames.com/osmos/"
+HOMEPAGE="https://www.osmos-game.com/"
 SRC_URI="${MY_P}.tar.gz"
 
 LICENSE="Hemisphere_Games-EULA"
