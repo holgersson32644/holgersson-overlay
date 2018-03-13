@@ -1,0 +1,45 @@
+--- a/Makefile	2015-07-27 11:40:07.000000000 +0200
++++ b/Makefile	2017-10-22 11:26:50.381365663 +0200
+@@ -1,11 +1,11 @@
+ PROJECT=mcp23s17
+ SOURCES=src/mcp23s17.c
+-LIBRARY=static
+-INCPATHS=
+-LIBPATHS=
+-LDFLAGS=
+-CFLAGS=-c -Wall
+-CC=gcc
++CC ?= gcc
++CFLAGS += -Wall
++LIBRARY=shared
++INCPATHS =
++LIBPATHS =
++LDFLAGS +=
+ 
+ # ------------ MAGIC BEGINS HERE -------------
+ 
+@@ -31,20 +31,20 @@
+     ifeq "$(LIBRARY)" "static"
+ 	ar rcs $(BINARY) $(OBJECTS)
+     else
+-	$(CC) $(LIBFLAGS) $(OBJECTS) $(LDFLAGS) -o $@
++	$(CC) $(CFLAGS) $(LIBFLAGS) $(OBJECTS) $(LDFLAGS) -o $@
+     endif
+ 
+ .c.o:
+-	$(CC) $(INCFLAGS) $(CFLAGS) -fPIC $< -o $@
++	$(CC) $(INCFLAGS) $(CFLAGS) $(LDFLAGS) -fPIC $< -o $@
+ 
+ distclean: clean
+ 	rm -f $(BINARY)
+ 
+ example: example.c
+-	gcc -o example example.c -Isrc/ -L. -lmcp23s17
++	$(CC) $(CFLAGS) $(LDFLAGS) -o example example.c -Isrc/ -L. -lmcp23s17
+ 
+ interrupt_example: interrupt_example.c
+-	gcc -o interrupt_example interrupt_example.c -Isrc/ -L. -lmcp23s17
++	$(CC) $(CFLAGS) $(LDFLAGS) -o interrupt_example interrupt_example.c -Isrc/ -L. -lmcp23s17
+ 
+ clean:
+ 	rm -f $(OBJECTS)
