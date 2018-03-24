@@ -18,7 +18,6 @@ then
 else
 		SRC_URI="https://github.com/tgalal/yowsup/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 		KEYWORDS="~amd64 ~x86"
-		S="${WORKDIR}/python-${P}"
 fi
 
 LICENSE="GPL-3"
