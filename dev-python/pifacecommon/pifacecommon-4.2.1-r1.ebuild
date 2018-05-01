@@ -10,7 +10,7 @@ inherit distutils-r1
 DESCRIPTION="Common functions for interacting with PiFace products"
 HOMEPAGE="https://github.com/piface/pifacecommon"
 
-if [[ ${PV} == "9999" ]]; then
+if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/piface/pifacecommon.git"
 else
