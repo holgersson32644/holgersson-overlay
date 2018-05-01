@@ -1,34 +1,27 @@
---- a/Makefile	2015-07-27 11:40:07.000000000 +0200
-+++ b/Makefile	2017-10-22 11:26:50.381365663 +0200
+--- a/Makefile	2018-05-01 06:00:00.000000000 +0200
++++ b/Makefile	2018-05-01 06:00:00.000000001 +0200
 @@ -1,11 +1,11 @@
  PROJECT=mcp23s17
  SOURCES=src/mcp23s17.c
 -LIBRARY=static
--INCPATHS=
--LIBPATHS=
++LIBRARY=shared
+ INCPATHS=
+ LIBPATHS=
 -LDFLAGS=
 -CFLAGS=-c -Wall
 -CC=gcc
-+CC ?= gcc
-+CFLAGS += -Wall
-+LIBRARY=shared
-+INCPATHS =
-+LIBPATHS =
 +LDFLAGS +=
++CFLAGS += -c -Wall
++CC ?= gcc
  
  # ------------ MAGIC BEGINS HERE -------------
  
-@@ -31,20 +31,20 @@
-     ifeq "$(LIBRARY)" "static"
- 	ar rcs $(BINARY) $(OBJECTS)
-     else
--	$(CC) $(LIBFLAGS) $(OBJECTS) $(LDFLAGS) -o $@
-+	$(CC) $(CFLAGS) $(LIBFLAGS) $(OBJECTS) $(LDFLAGS) -o $@
+@@ -35,16 +35,16 @@
      endif
  
  .c.o:
 -	$(CC) $(INCFLAGS) $(CFLAGS) -fPIC $< -o $@
-+	$(CC) $(INCFLAGS) $(CFLAGS) $(LDFLAGS) -fPIC $< -o $@
++	$(CC) $(INCFLAGS) $(CFLAGS) $(LIBFLAGS) -fPIC $< -o $@
  
  distclean: clean
  	rm -f $(BINARY)
@@ -43,3 +36,4 @@
  
  clean:
  	rm -f $(OBJECTS)
+
