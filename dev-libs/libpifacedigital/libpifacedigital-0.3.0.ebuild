@@ -8,7 +8,7 @@ inherit toolchain-funcs
 DESCRIPTION="C library for controlling (RaspberryPi) PiFace Digital"
 HOMEPAGE="https://github.com/piface/libpifacedigital"
 
-if [[ ${PV} == "9999" ]]; then
+if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/piface/libpifacedigital.git"
 else
@@ -18,7 +18,6 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-#IUSE="python java javascript lua"
 IUSE=""
 
 DEPEND="dev-libs/libmcp23s17"
