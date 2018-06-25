@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 PYTHON_REQ_USE="readline"
 
@@ -24,15 +24,13 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-# we let depend axolotl on >=protobuf-3.1.0, so let's do
-# the same here (latest stable at 2018-02-14).
-RDEPEND=">=dev-python/axolotl-0.1.39[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/python-axolotl-0.1.39[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/configargparse[${PYTHON_USEDEP}]
-	>=dev-libs/protobuf-3.1.0
+	dev-libs/protobuf
 	dev-python/pycryptodome[${PYTHON_USEDEP}]
-	dev-python/axolotl-curve25519[${PYTHON_USEDEP}]
+	dev-python/python-axolotl-curve25519[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
