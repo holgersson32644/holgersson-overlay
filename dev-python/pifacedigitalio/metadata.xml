@@ -5,4 +5,7 @@
 		<email>holgersson@posteo.de</email>
 		<name>Nils Freydank</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">piface/pifacedigitalio</remote-id>
+	</upstream>
 </pkgmetadata>
