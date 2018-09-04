@@ -1,11 +1,10 @@
-# holgersson-overlay
+***holgersson-overlay***
 
-## Main
-This is my "private" [overlay][holgersson-overlay] for Gentoo/Linux.
-There will be different ebuilds from different sources, mostly temporary
-before submitting to the [main Gentoo bugtracker][bgo].
+# Main
+This is my private and unofficial [overlay][holgersson-overlay] for Gentoo/Linux.
+There will be different ebuilds from different sources, hopefully only temporary, before submitting to the [main Gentoo bugtracker][bgo] resp. to the [main portage tree][portage].
 
-## Setup & synchronisation
+# Setup & synchronisation
 Just run layman from `app-portage/layman` with needed privileges, e.g. root:
 ```sh
 $ layman -a holgersson-overlay
@@ -17,7 +16,7 @@ $ emerge --sync
 ```
 You might set `USE="sync-plugin-portage"` for layman, too.
 
-## Maintainer
+# Maintainer
 If you encounter bugs, please send a mail to
 ```
 holgersson [ascii-symbol-64] posteo [ascii-symbol-46] de
@@ -26,10 +25,9 @@ or open a bug report on the [main Gentoo bugtracker][bgo]
 (please remember to Cc me there). Bug descriptions, suggestions, patches,
 critics and chorus of praise are all welcome!
 
-GPG Key ID: 0x766B 8122 1342 6912 3401 492A 8B54 D7A3 FF3C DB17
+GPG key ID: **0x00EF D31F 1B60 D5DB ADB8 31C1 C0EC E696 0E54 475B**
 
-
-## License
+# License
 - The contents of this document are licensed under the `CC-BY-SA-3.0 license`.
 The ebuilds are licensed under the `GNU General Public License v2` for compability with
 the main Gentoo/portage tree.
@@ -41,3 +39,4 @@ the main Gentoo/portage tree.
 
 [holgersson-overlay]: https://git.holgersson.xyz/holgersson-overlay
 [bgo]: https://bugs.gentoo.org
+[portage]: https://packages.gentoo.org/
