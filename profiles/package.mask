@@ -3,12 +3,3 @@
 # syntax:
 # author <email address> (LANG=C date +%d\ %b\ %Y)
 # reason
-
-# Nils Freydank <holgersson@posteo.de> (29 Dez 2018)
-# Mask as I do not run the piface libs on any RPi anymore
-# and can therefore not provide any support nor proper testing.
-# Might be removed somewhere in the future.
-dev-libs/libmcp23s17
-dev-libs/libpifacedigital
-dev-python/pifacecommon
-dev-python/pifacedigitalio
