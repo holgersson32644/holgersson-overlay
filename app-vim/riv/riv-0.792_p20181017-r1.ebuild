@@ -20,4 +20,4 @@ fi
 
 LICENSE="MIT"
 # FIXME: /usr/share/vim/vimfiles/after/syntax/python.vim file collision
-DEPEND="!!dev-python/jedi"
+DEPEND="!!app-vim/jedi"
