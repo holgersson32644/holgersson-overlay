@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -19,3 +19,5 @@ else
 fi
 
 LICENSE="MIT"
+# FIXME: /usr/share/vim/vimfiles/after/syntax/python.vim file collision
+DEPEND="!!dev-python/jedi"
