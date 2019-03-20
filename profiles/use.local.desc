@@ -1,0 +1,3 @@
+app-emulation/lxd:daemon - Build the system daemon, not just the client tool
+app-emulation/lxd:dnsmasq - Depend on dnsmasq to provide DHCP and DNS
+app-emulation/lxd:tools - Build and install optional tools
