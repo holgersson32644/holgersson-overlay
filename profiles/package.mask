@@ -3,3 +3,7 @@
 # syntax:
 # author <email address> (LANG=C date +%d\ %b\ %Y)
 # reason
+
+# Nils Freydank <holgersson@posteo.de> (20 Mar 2019)
+# Mask my modified lxd ebuild as it bluntly removes a dependency
+app-emulation/lxd
