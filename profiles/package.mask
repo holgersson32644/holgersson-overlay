@@ -1,9 +1,9 @@
 #-------------------------------------------
 # package.mask file for holgersson-overlay
 # syntax:
-# author <email address> (LANG=C date +%d\ %b\ %Y)
+# author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
 
-# Nils Freydank <holgersson@posteo.de> (20 Mar 2019)
+# Nils Freydank <holgersson@posteo.de> (2019-03-20)
 # Mask my modified lxd ebuild as it bluntly removes a dependency
 app-emulation/lxd
