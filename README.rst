@@ -8,9 +8,38 @@ This is my private and unofficial overlay_ for Gentoo/Linux.
 There will be different ebuilds from different sources, hopefully only temporary
 before submitting to the `main Gentoo bugtracker`_ resp. to the `main portage tree`_.
 
-Setup & synchronisation
-=======================
-Just run layman from `app-portage/layman` with needed privileges, e.g. root:
+Setup and synchronisation
+=========================
+
+There are several possible ways of adding this overlay:
+
+Adding the overlay manually
+---------------------------
+
+You can clone the repository and create `/etc/portage/repos.conf/holgersson-overlay.conf`
+with the following contents:
+
+.. ini
+
+   [holgersson-overlay]
+   priority = 50
+   location = /path/to/local/holgersson-overlay
+   sync-type = git
+   sync-uri = https://github.com/gentoo-mirror/holgersson-overlay.git
+
+Using eselect-repository
+------------------------
+
+Run eselect repository:
+
+.. sh
+   $ eselect repository enable holgersson-overlay
+
+
+Using layman
+------------
+
+Run layman from `app-portage/layman`:
 
 .. sh
    $ layman -a holgersson-overlay
@@ -21,7 +50,7 @@ and optional for global updates:
    $ layman -S
    $ emerge --sync
 
-You might set `USE="sync-plugin-portage"` for layman, too.
+You might want to set `USE="sync-plugin-portage"` for layman, too.
 
 Maintainer
 ==========
