@@ -1,7 +1,5 @@
----
-Title: Readme for holgersson-overlay
-Author: Nils Freydank <holgersson [ascii-symbol-64] posteo [ascii-symbol-46] de>
----
+.. Title: Readme for holgersson-overlay
+.. Author: Nils Freydank <holgersson [ascii-symbol-64] posteo [ascii-symbol-46] de>
 
 Main
 ====
