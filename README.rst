@@ -63,8 +63,8 @@ critics and chorus of praise are all welcome!
 
 GPG key ID: **0x00EF D31F 1B60 D5DB ADB8 31C1 C0EC E696 0E54 475B**
 
-License
-=======
+License and copying
+===================
 
 - The contents of this document are licensed under the `CC-BY-SA-3.0 license`. The ebuilds are licensed under the `GNU General Public License v2` for compability with the main Gentoo/portage tree.
 - Source files might have different licenses; these should be outlined in the ebuilds themselves.
