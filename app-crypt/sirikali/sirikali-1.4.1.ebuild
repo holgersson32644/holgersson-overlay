@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 	gnome-keyring? ( app-crypt/libsecret )
 	virtual/pkgconfig"
 
-
 src_configure() {
 	local MY_S_FLAG=false
 	use kwallet && MY_S_FLAG=true
