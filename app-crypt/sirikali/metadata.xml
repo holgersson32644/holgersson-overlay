@@ -9,6 +9,9 @@
 		<flag name="kwallet">Enable support for storing passwords in kwallet</flag>
 		<flag name="gnome-keyring">Enable support for storing passowrds in gnome-keyring</flag>
 	</use>
+	<longdescription>
+		SiriKali supports fscrypt, securefs, ecryptfs, cryfs, encfs, gocryptfs and sshfs.
+	</longdescription>
 	<upstream>
 		<remote-id type="github">mhogomchungu/sirikali</remote-id>
 	</upstream>
