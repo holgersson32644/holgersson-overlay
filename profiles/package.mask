@@ -7,9 +7,3 @@
 # Nils Freydank <holgersson@posteo.de> (2019-03-20)
 # Mask my modified lxd ebuild as it bluntly removes a dependency
 app-emulation/lxd
-
-# Nils Freydank <holgersson@posteo.de> (2019-10-02)
-# tf.keras superseeds the legacy stand-alone keras. Please switch
-# to tf.keras instead which is part of =sci-libs/tensorflow-2.0.0.
-# Removal after 2019-10-31.
-dev-python/keras
