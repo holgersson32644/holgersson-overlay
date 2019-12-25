@@ -19,7 +19,7 @@ Adding the overlay manually
 You can clone the repository and create `/etc/portage/repos.conf/holgersson-overlay.conf`
 with the following contents:
 
-.. ini
+.. code-block:: ini
 
    [holgersson-overlay]
    priority = 50
@@ -32,8 +32,9 @@ Using eselect-repository
 
 Run eselect repository:
 
-.. sh
-   $ eselect repository enable holgersson-overlay
+.. code:: shell
+
+	$ eselect repository enable holgersson-overlay
 
 
 Using layman
@@ -41,12 +42,14 @@ Using layman
 
 Run layman from `app-portage/layman`:
 
-.. sh
+.. code:: shell
+ 
    $ layman -a holgersson-overlay
 
 and optional for global updates:
 
-.. sh
+.. code-block:: shell
+
    $ layman -S
    $ emerge --sync
 
