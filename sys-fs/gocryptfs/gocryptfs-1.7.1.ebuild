@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
@@ -10,7 +10,7 @@ EGO_PN="github.com/rfjakob/${PN}"
 inherit golang-vcs-snapshot
 
 DESCRIPTION="Encrypted overlay filesystem written in Go"
-HOMEPAGE="https://nuetzlich.net/gocryptfs"
+HOMEPAGE="https://nuetzlich.net/gocryptfs https://github.com/rfjakob/gocryptfs/releases"
 SRC_URI="https://${EGO_PN}/releases/download/v${PV}/${PN}_v${PV}_src-deps.tar.gz -> ${P}.tar.gz"
 
 # in detail:
