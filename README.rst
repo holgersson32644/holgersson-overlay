@@ -32,7 +32,7 @@ You can clone the repository and create
 Using eselect-repository
 ------------------------
 
-Run eselect repository:
+Run eselect repository from `app-eselect/eselect-repository`:
 
 .. code:: shell
 
