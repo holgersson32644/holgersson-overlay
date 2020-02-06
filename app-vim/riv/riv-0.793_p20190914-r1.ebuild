@@ -9,8 +9,12 @@ COMMIT_ID="87a1f2c1e487ee0021855fd0c65c3f3244f4fc61"
 
 DESCRIPTION="vim plugin: Take Notes in rst"
 HOMEPAGE="https://github.com/gu-fan/riv.vim"
+LICENSE="MIT"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
-if [[ ${PV} == *9999 ]]; then
+if [[ ${PV} == *9999 ]]
+then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/gu-fan/riv.vim.git"
 else
@@ -19,6 +23,5 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-LICENSE="MIT"
 # FIXME/upstream: /usr/share/vim/vimfiles/after/syntax/python.vim file collision
 DEPEND="!!app-vim/jedi"
