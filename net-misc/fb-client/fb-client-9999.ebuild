@@ -8,6 +8,10 @@ PYTHON_COMPAT=( python3_{6,7} )
 
 inherit eutils python-r1
 
+DESCRIPTION="Client for paste.xinu.at"
+HOMEPAGE="https://paste.xinu.at"
+LICENSE="GPL-3"
+
 if [[ "${PV}" == *9999 ]]
 then
 	inherit git-r3
@@ -19,13 +23,12 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="Client for paste.xinu.at"
-HOMEPAGE="https://paste.xinu.at"
-
-LICENSE="GPL-3"
 SLOT="0"
 IUSE="+clipboard"
+RESTRICT="test" # this packages has no tests
 
-RDEPEND="dev-python/pyxdg[${PYTHON_USEDEP}]
-		dev-python/pycurl[${PYTHON_USEDEP}]
-		clipboard? ( x11-misc/xclip )"
+RDEPEND="
+	dev-python/pyxdg[${PYTHON_USEDEP}]
+	dev-python/pycurl[${PYTHON_USEDEP}]
+	clipboard? ( x11-misc/xclip )
+"
