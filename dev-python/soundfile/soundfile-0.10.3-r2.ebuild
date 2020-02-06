@@ -4,7 +4,7 @@
 EAPI="7"
 
 # drop pypy{,3} as long as cffi has no support for it
-PYTHON_COMPAT=( python3_{5,6,7} )
+PYTHON_COMPAT=( python3_{6,7} )
 
 inherit distutils-r1
 
@@ -21,6 +21,7 @@ LICENSE="PySoundFile-BSD-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 DEPEND="dev-python/cffi[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
