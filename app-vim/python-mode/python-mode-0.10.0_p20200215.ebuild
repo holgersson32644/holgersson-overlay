@@ -3,10 +3,10 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_6 )
+PYTHON_COMPAT=( python3_{6,7} )
 inherit python-r1 vim-plugin
 
-COMMIT_ID="1e97e4d8fa427f7b3262b2daadff8d32ca5be536"
+COMMIT_ID="30a73d861aba2e1a5e0693d3a3df30293182efe2"
 
 DESCRIPTION="vim plugin: Turn vim into a python IDE"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3770 https://github.com/klen/python-mode"
@@ -37,8 +37,8 @@ RDEPEND="
 	>=dev-python/astroid-2.1.0[${PYTHON_USEDEP}]
 	dev-python/autopep8[${PYTHON_USEDEP}]
 	dev-python/mccabe[${PYTHON_USEDEP}]
-	dev-python/pep257[${PYTHON_USEDEP}]
 	dev-python/pycodestyle[${PYTHON_USEDEP}]
+	dev-python/pydocstyle[${PYTHON_USEDEP}]
 	dev-python/pyflakes[${PYTHON_USEDEP}]
 	dev-python/pylama[${PYTHON_USEDEP}]
 	>=dev-python/pylint-2.2.2[${PYTHON_USEDEP}]
