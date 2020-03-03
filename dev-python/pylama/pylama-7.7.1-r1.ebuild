@@ -4,6 +4,7 @@
 EAPI="7"
 
 PYTHON_COMPAT=( python3_{6,7} )
+DISTUTILS_USE_SETUPTOOLS="rdepend"
 
 inherit distutils-r1
 
@@ -19,13 +20,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
+BDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/mccabe-0.5.2[${PYTHON_USEDEP}]
 	dev-python/pycodestyle[${PYTHON_USEDEP}]
 	dev-python/pydocstyle[${PYTHON_USEDEP}]
 	dev-python/pyflakes[${PYTHON_USEDEP}]
-	"
+"
 DEPEND="
 	${RDEPEND}
 	test? (
@@ -33,7 +34,16 @@ DEPEND="
 		dev-python/pytest[${PYTHON_USEDEP}]
 		dev-python/radon[${PYTHON_USEDEP}]
 	)
-	"
+"
+
+src_prepare() {
+	default
+
+	if ! use test
+		then
+			rm ${S}/tests -r || die
+	fi
+}
 
 python_test() {
 	py.test -v test_pylama.py || die "tests failed with ${EPYTHON}"
