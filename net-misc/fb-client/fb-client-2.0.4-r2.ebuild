@@ -3,8 +3,7 @@
 
 EAPI="7"
 
-# at least pycurl blocks py3.8 so far
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 
 inherit eutils python-r1
 
