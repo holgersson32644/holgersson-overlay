@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>holgersson@posteo.de</email>
+		<name>Nils Freydank</name>
+	</maintainer>
+	<upstream>
+		<changelog>https://help.scilab.org/docs/6.1.0/en_US/CHANGES.html</changelog>
+		<bugs-to>https://bugzilla.scilab.org/</bugs-to>
+	</upstream>
+</pkgmetadata>
