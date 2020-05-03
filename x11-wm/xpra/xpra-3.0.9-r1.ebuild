@@ -41,7 +41,10 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		media-libs/gst-plugins-base:1.0
 		dev-python/gst-python:1.0 )
 	vpx? ( media-libs/libvpx media-video/ffmpeg )
-	webp? ( media-libs/libwebp )
+	webp? (
+		dev-python/pillow[webp]
+		media-libs/libwebp
+	)
 "
 RDEPEND="${COMMON_DEPEND}
 	dev-python/netifaces[${PYTHON_USEDEP}]
