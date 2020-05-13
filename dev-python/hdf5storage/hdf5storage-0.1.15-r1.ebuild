@@ -24,7 +24,13 @@ RDEPEND="
 "
 BDEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/nose[${PYTHON_USEDEP}]
+		|| (
+			dev-lang/julia
+			dev-lang/julia-bin
+		)
+	)
 "
 
 src_test(){
