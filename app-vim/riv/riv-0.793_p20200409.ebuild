@@ -5,7 +5,7 @@ EAPI="7"
 
 inherit vim-plugin
 
-COMMIT_ID="d52844691ca2f139e4b634db65aa49c57a0fc2b3"
+COMMIT_ID="e26c3e8dce4c1332e802cde84f83e61ec8a13986"
 
 DESCRIPTION="vim plugin: Take Notes in rst"
 HOMEPAGE="https://github.com/gu-fan/riv.vim"
