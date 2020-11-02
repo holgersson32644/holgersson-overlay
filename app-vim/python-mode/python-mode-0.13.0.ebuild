@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_7 )
+PYTHON_COMPAT=( python3_{7,8} )
 inherit python-r1 vim-plugin
 
 COMMIT_ID="295e84d9dd7f4887f8a5635e9dfe88dfeabaf00c"
@@ -34,7 +34,7 @@ VIM_PLUGIN_HELPURI="https://github.com/klen/python-mode"
 VIM_PLUGIN_MESSAGES="filetype"
 
 RDEPEND="
-	>=dev-python/astroid-2.1.0[${PYTHON_USEDEP}]
+	dev-python/astroid[${PYTHON_USEDEP}]
 	dev-python/autopep8[${PYTHON_USEDEP}]
 	dev-python/mccabe[${PYTHON_USEDEP}]
 	dev-python/pycodestyle[${PYTHON_USEDEP}]
