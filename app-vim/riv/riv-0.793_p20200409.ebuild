@@ -16,6 +16,7 @@ RESTRICT="!test? ( test )"
 if [[ ${PV} == *9999 ]]
 then
 	inherit git-r3
+#	EGIT_REPO_URI="https://git.holgersson.xyz/mirror/riv.vim"
 	EGIT_REPO_URI="https://github.com/gu-fan/riv.vim.git"
 else
 	SRC_URI="https://github.com/gu-fan/riv.vim/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
