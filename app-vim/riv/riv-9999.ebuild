@@ -5,7 +5,7 @@ EAPI="7"
 
 inherit vim-plugin
 
-COMMIT_ID="87a1f2c1e487ee0021855fd0c65c3f3244f4fc61"
+COMMIT_ID="e26c3e8dce4c1332e802cde84f83e61ec8a13986"
 
 DESCRIPTION="vim plugin: Take Notes in rst"
 HOMEPAGE="https://github.com/gu-fan/riv.vim"
@@ -16,6 +16,7 @@ RESTRICT="!test? ( test )"
 if [[ ${PV} == *9999 ]]
 then
 	inherit git-r3
+#	EGIT_REPO_URI="https://git.holgersson.xyz/mirror/riv.vim"
 	EGIT_REPO_URI="https://github.com/gu-fan/riv.vim.git"
 else
 	SRC_URI="https://github.com/gu-fan/riv.vim/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
