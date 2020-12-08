@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_8 )
 inherit python-r1 vim-plugin
 
 COMMIT_ID="295e84d9dd7f4887f8a5635e9dfe88dfeabaf00c"
