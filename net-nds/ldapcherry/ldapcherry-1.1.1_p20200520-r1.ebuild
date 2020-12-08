@@ -5,8 +5,7 @@ EAPI=7
 
 COMMIT_ID="4da050236db53ef2652b41c81814574e095cecfa"
 
-# python-ldap doesn't support 3.9 @ 2020-10-22
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1
 
 DESCRIPTION="LDAP web UI written in python"
