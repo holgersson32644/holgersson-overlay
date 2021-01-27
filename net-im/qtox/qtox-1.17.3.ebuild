@@ -76,7 +76,7 @@ src_configure() {
 		-DGIT_DESCRIBE="${PV}"
 	)
 
-	cmake-src_configure
+	cmake_src_configure
 }
 
 pkg_postinst() {
