@@ -1,4 +1,4 @@
-# Copyright 2019-2020 Gentoo Authors
+# Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/nemuTUI/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.g
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="network-map +ovf savevm spice +vnc-client"
+IUSE="network-map +ovf +savevm spice +vnc-client"
 
 RDEPEND="
 	app-emulation/qemu[vnc,virtfs,spice?]
@@ -68,9 +68,4 @@ pkg_postinst() {
 	elog "cp /usr/share/nemu/scripts/42-net-macvtap-perm.rules /etc/udev/rules.d"
 	elog "Afterwards reboot or reload udev with"
 	elog "udevadm control --reload-rules && udevadm trigger"
-	if use savevm; then
-		elog ""
-		elog "QEMU must be patched with qemu-qmp-savevm-VERSION.patch"
-		elog "Get this patch from nEMU repository"
-	fi
 }
