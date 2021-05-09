@@ -15,7 +15,7 @@ if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 else
 	if [[ ${PV} == *_p* ]]; then
-		KEYWORDS="~amd64 ~x86"
+		#KEYWORDS="~amd64 ~x86"
 		SRC_URI="https://github.com/qTox/qTox/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/qTox-${COMMIT_ID}"
 	else
