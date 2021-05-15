@@ -6,8 +6,8 @@ EAPI="7"
 inherit font
 
 DESCRIPTION="A media-fonts/droid based font with buzzword censorship"
-HOMEPAGE="http://sansbullshitsans.com"
-SRC_URI="http://pixelambacht.nl/downloads/SansBullshitSans.ttf"
+HOMEPAGE="https://www.sansbullshitsans.com/"
+SRC_URI="https://pixelambacht.nl/downloads/SansBullshitSans.ttf"
 
 LICENSE="Apache-2.0"
 SLOT="0"
