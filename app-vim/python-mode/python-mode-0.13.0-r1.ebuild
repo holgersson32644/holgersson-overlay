@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -9,9 +9,10 @@ inherit python-r1 vim-plugin
 COMMIT_ID="295e84d9dd7f4887f8a5635e9dfe88dfeabaf00c"
 
 DESCRIPTION="vim plugin: Turn vim into a python IDE"
-HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3770 https://github.com/klen/python-mode"
+HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=3770 https://github.com/python-mode/python-mode"
 LICENSE="LGPL-3"
 IUSE="test"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
 if [[ ${PV} == *9999 ]]; then
@@ -21,19 +22,20 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		KEYWORDS="~amd64 ~x86"
 		S="${WORKDIR}/${PN}-${COMMIT_ID}"
-		SRC_URI="https://github.com/klen/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/python-mode/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 	else
 		KEYWORDS="~amd64 ~x86"
-		SRC_URI="https://github.com/klen/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/python-mode/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	fi
 fi
 
 VIM_PLUGIN_HELPFILES="PythonModeCommands"
 VIM_PLUGIN_HELPTEXT=""
-VIM_PLUGIN_HELPURI="https://github.com/klen/python-mode"
+VIM_PLUGIN_HELPURI="https://github.com/python-mode/python-mode"
 VIM_PLUGIN_MESSAGES="filetype"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	dev-python/astroid[${PYTHON_USEDEP}]
 	dev-python/autopep8[${PYTHON_USEDEP}]
 	dev-python/mccabe[${PYTHON_USEDEP}]
