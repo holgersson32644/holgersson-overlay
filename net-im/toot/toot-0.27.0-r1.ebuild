@@ -9,7 +9,7 @@ DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="CLI/TUI mastodon client written in python"
-HOMEPAGE="https://github.com/ihabunek/toot/ https://pypi.org/project/toot"
+HOMEPAGE="https://github.com/ihabunek/toot/ https://pypi.org/project/toot/"
 
 if [ "${PV}" == "9999" ]; then
 	inherit git-r3
