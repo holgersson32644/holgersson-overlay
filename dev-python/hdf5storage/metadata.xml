@@ -6,7 +6,7 @@
 		<name>Nils Freydank</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">freijanordsiek/hdf5storage</remote-id>
+		<remote-id type="github">frejanordsiek/hdf5storage</remote-id>
 		<remote-id type="pypi">hdf5storage</remote-id>
 	</upstream>
 </pkgmetadata>

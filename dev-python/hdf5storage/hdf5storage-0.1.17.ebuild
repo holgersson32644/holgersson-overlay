@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1
 
 DESCRIPTION="Python library for using HDF5 formatted files"
-HOMEPAGE="https://github.com/frejanordsiek/hdf5storage http://pythonhosted.org/hdf5storage"
+HOMEPAGE="https://github.com/frejanordsiek/hdf5storage https://pythonhosted.org/hdf5storage/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="BSD-2"
@@ -23,6 +23,7 @@ RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
 "
 BDEPEND="
+	app-arch/unzip
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
