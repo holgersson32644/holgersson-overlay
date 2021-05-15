@@ -6,7 +6,7 @@ EAPI="7"
 COMMIT_ID="eec6e21194eae9877e73c92ffdf211ebc4b260f3"
 
 DESCRIPTION="Repository list for Archlinux's binary package manager"
-HOMEPAGE="https://www.archlinux.org/mirrorlist/"
+HOMEPAGE="https://archlinux.org/mirrorlist/"
 SRC_URI="https://raw.githubusercontent.com/archlinux/svntogit-packages/${COMMIT_ID}/trunk/mirrorlist -> ${P}"
 KEYWORDS="~amd64"
 LICENSE="GPL-2"
