@@ -1,33 +1,27 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
-# drop pypy{,3} as long as cffi has no support for it
 PYTHON_COMPAT=( python3_{8..9} )
 
 inherit distutils-r1
 
-MY_PN="SoundFile"
-MY_P="${MY_PN}-${PV}"
-
 COMMIT_ID="744efb4b01abc72498a96b09115b42a4cabd85e4"
 
 DESCRIPTION="SoundFile is an audio library based on libsndfile, CFFI, and NumPy"
-HOMEPAGE="https://github.com/bastibe/SoundFile"
+HOMEPAGE="https://github.com/bastibe/python-soundfile"
 
 if [[ ${PV} == *9999 ]]; then
-	EGIT_REPO_URI="https://github.com/bastibe/SoundFile"
+	EGIT_REPO_URI="https://github.com/bastibe/python-${PN}"
 	inherit git-r3
 else
 	if [[ ${PV} == *_p* ]]; then
-		SRC_URI="https://github.com/bastibe/SoundFile/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
-		S="${WORKDIR}/python-soundfile-${COMMIT_ID}"
+		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 		KEYWORDS="~amd64 ~x86"
 	else
-		# Upstream messes around whith uploading files. Cool
-		# SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz -> ${P}.tar.gz"
-		SRC_URI="https://github.com/bastibe/SoundFile/archive/${PV}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 		KEYWORDS="~amd64 ~x86"
 	fi
 fi
