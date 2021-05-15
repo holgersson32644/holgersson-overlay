@@ -9,7 +9,7 @@ inherit distutils-r1
 MY_PN="UliEngineering"
 
 DESCRIPTION="Computational tools for electronics engineering"
-HOMEPAGE="https://pypi.org/project/UliEngineering https://github.com/ulikoehler/UliEngineering"
+HOMEPAGE="https://pypi.org/project/UliEngineering/ https://github.com/ulikoehler/UliEngineering"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
