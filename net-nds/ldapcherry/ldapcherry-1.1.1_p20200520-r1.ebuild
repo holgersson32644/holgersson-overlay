@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1
 
 DESCRIPTION="LDAP web UI written in python"
-HOMEPAGE="https://pypi.org/project/ldapcherry https://github.com/kakwa/ldapcherry"
+HOMEPAGE="https://pypi.org/project/ldapcherry/ https://github.com/kakwa/ldapcherry"
 
 if [[ "${PV}" == *_p* ]]; then
 	SRC_URI="https://github.com/kakwa/ldapcherry/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
