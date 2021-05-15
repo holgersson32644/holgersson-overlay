@@ -9,7 +9,7 @@ EGO_PN="github.com/rfjakob/${PN}"
 inherit go-module
 
 DESCRIPTION="Encrypted overlay filesystem written in Go"
-HOMEPAGE="https://nuetzlich.net/gocryptfs https://github.com/rfjakob/gocryptfs/releases"
+HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/releases"
 
 EGO_SUM=(
 	"github.com/davecgh/go-spew v1.1.0"
