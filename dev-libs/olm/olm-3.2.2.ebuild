@@ -13,6 +13,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="doc test"
 KEYWORDS="~amd64"
+RESTRICT="!test? ( test )"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
