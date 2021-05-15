@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -9,7 +9,7 @@ DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="CLI/TUI mastodon client written in python"
-HOMEPAGE="https://github.com/ihabunek/toot https://pypi.org/project/toot"
+HOMEPAGE="https://github.com/ihabunek/toot/ https://pypi.org/project/toot"
 
 if [ "${PV}" == "9999" ]; then
 	inherit git-r3
