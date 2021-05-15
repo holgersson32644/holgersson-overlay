@@ -6,7 +6,7 @@ EAPI="7"
 inherit autotools
 
 DESCRIPTION="Archlinux's binary package manager"
-HOMEPAGE="https://archlinux.org/pacman https://wiki.archlinux.org/index.php/Pacman"
+HOMEPAGE="https://archlinux.org/pacman/ https://wiki.archlinux.org/title/Pacman"
 
 if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
