@@ -17,11 +17,7 @@
       PulseAudio plugin enabled. This ensures that clients supporting
       ALSA only will use PulseAudio.
     </flag>
-    <flag name="elogind">Use <pkg>sys-auth/elogind</pkg> for giving each session a PA client</flag>
-    <flag name="gconf">
-      Ensure <pkg>gnome-base/gconf</pkg> is present for pulseaudio GConf
-      to GSettings module automatic migration (keeping the user configuration)
-    </flag>
+    <flag name="daemon">place holder desc., short: use PA instead of pipewire</flag>
     <flag name="oss">
       Enable OSS sink/source (output/input). Deprecated, upstream does
       not support this on systems where other sink/source systems are
@@ -42,10 +38,6 @@
     </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>
-    <flag name="realtime">
-      Makes PulseAudio use RealtimeKit (<pkg>sys-auth/rtkit</pkg>) to get
-      real-time priority while running.
-    </flag>
     <flag name="equalizer">
       Enable the equalizer module (requires <pkg>sci-libs/fftw</pkg>).
     </flag>
