@@ -10,7 +10,7 @@ inherit distutils-r1
 COMMIT_ID="045cef299bec77e3ae2d1980ad32c1fd2c2896bf"
 
 DESCRIPTION="Run docker-compose files without root with podman"
-HOMEPAGE="https://pypi.org/project/podman-compose https://github.com/containers/podman-compose"
+HOMEPAGE="https://pypi.org/project/podman-compose/ https://github.com/containers/podman-compose"
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/containers/podman-compose.git"
