@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
@@ -79,21 +79,18 @@ fi
 # BSD           vendor/golang.org/x/sync/LICENSE
 # BSD:          vendor/github.com/hanwen/go-fuse/LICENSE
 # BSD-2:        vendor/github.com/pkg/xattr/LICENSE
-# Apache-2.0:   vendor/github.com/rfjakob/eme/LICENSE 
+# Apache-2.0:   vendor/github.com/rfjakob/eme/LICENSE
 LICENSE="Apache-2.0 BSD BSD-2 MIT"
 
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="debug libressl +man pie +ssl"
+IUSE="debug +man pie +ssl"
 
 BDEPEND="man? ( dev-go/go-md2man )"
 RDEPEND="
 	sys-fs/fuse
-	ssl? (
-		!libressl? ( dev-libs/openssl:0= )
-		libressl? ( dev-libs/libressl:0= )
-	)
+	ssl? ( dev-libs/openssl:0= )
 "
 
 S="${WORKDIR}/${PN}_v${PV}_src-deps"
