@@ -152,7 +152,7 @@ RDEPEND="${RDEPEND}
 "
 
 BDEPEND="
-	doc? ( app-doc/doxygen )
+	app-doc/doxygen
 	orc? ( >=dev-lang/orc-0.4.15 )
 	system-wide? ( dev-util/unifdef )
 	test? ( >=dev-libs/check-0.9.10 )
