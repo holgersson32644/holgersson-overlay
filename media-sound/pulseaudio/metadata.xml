@@ -17,7 +17,11 @@
       PulseAudio plugin enabled. This ensures that clients supporting
       ALSA only will use PulseAudio.
     </flag>
-    <flag name="daemon">place holder desc., short: use PA instead of pipewire</flag>
+    <flag name="daemon">Build the pulseaudio binary (not-needed for pipewire-pulse)</flag>
+    <flag name="elogind">Use <pkg>sys-auth/elogind</pkg> for giving each session a PA client</flag>
+    <flag name="gnome">
+      Enables clearing of unavailable devices from database files which is recommended for GNOME.
+    </flag>
     <flag name="oss">
       Enable OSS sink/source (output/input). Deprecated, upstream does
       not support this on systems where other sink/source systems are
