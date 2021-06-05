@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{8..9} )
 inherit eutils python-r1
 
 DESCRIPTION="Client for paste.xinu.at"
-HOMEPAGE="https://paste.xinu.at"
+HOMEPAGE="https://paste.xinu.at https://git.server-speed.net/users/flo/fb/"
 LICENSE="GPL-3"
 
 if [[ "${PV}" == *9999 ]]
