@@ -85,8 +85,9 @@ LICENSE="Apache-2.0 BSD BSD-2 MIT"
 
 SLOT="0"
 KEYWORDS="~amd64"
-
 IUSE="debug +man pie +ssl"
+# Some tests need and ext4, some need libsandbox.so preloaded.
+RESTRICT="test"
 
 BDEPEND="man? ( dev-go/go-md2man )"
 RDEPEND="
