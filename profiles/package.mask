@@ -3,3 +3,9 @@
 # syntax:
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
+
+# Nils Freydank <holgersson@posteo.de> (2021-06-14)
+# Dropping canto after 2021-07-14. I migrated to net-news/newsboat and won't
+# maintain the package anymore.
+net-news/canto-curses::holgersson-overlay
+net-news/canto-daemon::holgersson-overlay
