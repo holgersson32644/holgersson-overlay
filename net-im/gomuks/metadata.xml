@@ -9,6 +9,6 @@
 		<flag name="encryption">Use dev-libs/olm for encryption</flag>
 	</use>
 	<upstream>
-		<remote-id type="gitlab">libre_hackerman/elopez-r-overlay</remote-id>
+		<remote-id type="github">tulir/gomuks</remote-id>
 	</upstream>
 </pkgmetadata>
