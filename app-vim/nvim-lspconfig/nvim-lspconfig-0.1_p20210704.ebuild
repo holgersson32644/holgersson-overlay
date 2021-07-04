@@ -26,6 +26,8 @@ BDEPEND=">app-editors/neovim-0.5.0"
 DOCS=( README.md )
 
 src_prepare(){
+	default
+
 	rm -rf test || die
 }
 
