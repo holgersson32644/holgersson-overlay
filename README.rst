@@ -66,7 +66,6 @@ or open a bug report on the `main Gentoo bugtracker`_
 (please remember to Cc me there). Bug descriptions, suggestions, patches,
 critics and chorus of praise are all welcome!
 
-GPG key ID: **0x00EF D31F 1B60 D5DB ADB8 31C1 C0EC E696 0E54 475B**
 GPG key ID: **0x8AD9 60BB A57A F797 88CC FEC0 3CAA 2CA5 14E4 EE5E**
 
 License and copying
