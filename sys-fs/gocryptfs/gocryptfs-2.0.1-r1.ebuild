@@ -3,7 +3,7 @@
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
 
-EAPI=7
+EAPI="8"
 
 EGO_PN="github.com/rfjakob/${PN}"
 inherit go-module
