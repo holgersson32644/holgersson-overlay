@@ -5,7 +5,7 @@ EAPI="7"
 
 PYTHON_COMPAT=( python3_{8..9} )
 
-inherit eutils python-r1
+inherit python-r1
 
 DESCRIPTION="Client for paste.xinu.at"
 HOMEPAGE="https://paste.xinu.at https://git.server-speed.net/users/flo/fb/"
@@ -15,13 +15,12 @@ if [[ "${PV}" == *9999 ]]
 then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.server-speed.net/users/flo/fb"
-	KEYWORDS=""
 else
 	SRC_URI="https://paste.xinu.at/data/client/fb-${PV}.tar.gz -> fb-client-${PVR}.tar.gz"
 	S="${WORKDIR}/fb-${PV}"
-	KEYWORDS="~amd64 ~x86"
 fi
 
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="+clipboard"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
