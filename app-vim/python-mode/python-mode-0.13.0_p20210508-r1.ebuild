@@ -58,7 +58,7 @@ RDEPEND="
 "
 
 src_install() {
-	rm -rf tests || die
+	rm -r tests || die
 	vim-plugin_src_install
 	insinto usr/share/${PN}
 }

@@ -28,7 +28,7 @@ DOCS=( README.md )
 src_prepare(){
 	default
 
-	rm -rf test || die
+	rm -r test || die
 }
 
 src_compile(){

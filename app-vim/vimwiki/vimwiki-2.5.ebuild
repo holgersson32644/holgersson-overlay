@@ -31,11 +31,10 @@ src_prepare() {
 	default
 
 	if ! use test; then
-		rm -rf test || die
-		rm -f Dockerfile || die
+		rm -r test Dockerfile || die
 	fi
 	# We store the appropriate license information inside the portage tree.
-	rm -rf LICENSE.md || die
+	rm -r LICENSE.md || die
 }
 
 pkg_postinst() {

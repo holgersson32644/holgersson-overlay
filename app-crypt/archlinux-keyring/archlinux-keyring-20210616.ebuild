@@ -13,7 +13,7 @@ IUSE=""
 
 src_prepare() {
 	# bluntly remove the makefile.
-	rm -f Makefile || die "Couldn't remove Makefile"
+	rm Makefile || die "Couldn't remove Makefile"
 
 	default
 }
