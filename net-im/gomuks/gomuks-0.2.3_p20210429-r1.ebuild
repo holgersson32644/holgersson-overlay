@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
+EGO_PN="github.com/tulir/gomuks"
+COMMIT_ID="2008d3755ec3c0da7372ab6de459d135b009ad6a"
+
 
 inherit go-module
 
@@ -165,8 +168,6 @@ go-module_set_globals
 
 DESCRIPTION="A terminal based Matrix client written in Go"
 HOMEPAGE="https://github.com/tulir/gomuks"
-EGO_PN="github.com/tulir/gomuks"
-COMMIT_ID="2008d3755ec3c0da7372ab6de459d135b009ad6a"
 
 if [[ ${PV} == *_p* ]]; then
 	SRC_URI="
