@@ -9,9 +9,3 @@
 # maintain the package anymore.
 net-news/canto-curses
 net-news/canto-daemon
-
-# Nils Freydank <holgersson@posteo.de> (2021-06-30)
-# Dropping python-mode after 2021-07-14. I migrated to neovim plus LSP and won't
-# maintain the package anymore. As masking here doesn't really show up on the
-# users' end anyways I will just drop it together with the other packages.
-app-vim/python-mode
