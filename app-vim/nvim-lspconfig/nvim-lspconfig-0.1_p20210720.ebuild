@@ -4,7 +4,7 @@
 EAPI=7
 
 inherit vim-plugin
-COMMIT_ID="5fe1b132534041e889278f081ff10c02b09c096f"
+COMMIT_ID="4f72377143fc0961391fb0e42e751b9f677fca4e"
 
 DESCRIPTION="vim plugin: Quickstart configurations for the Nvim LSP client"
 HOMEPAGE="https://github.com/neovim/nvim-lspconfig"
@@ -22,7 +22,7 @@ else
 	S="${WORKDIR}/${PN}-${COMMIT_ID}"
 fi
 
-BDEPEND=">app-editors/neovim-0.5.0"
+BDEPEND=">=app-editors/neovim-0.5.0"
 DOCS=( README.md )
 
 src_prepare(){
