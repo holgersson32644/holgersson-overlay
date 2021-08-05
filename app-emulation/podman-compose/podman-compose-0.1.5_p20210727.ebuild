@@ -19,13 +19,12 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		SRC_URI="https://github.com/containers/podman-compose/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/podman-compose-${COMMIT_ID}"
-		KEYWORDS="~amd64 ~x86"
 	else
 		SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-		KEYWORDS="~amd64 ~x86"
 		S="${WORKDIR}/qTox-${PV}"
 	fi
 fi
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
