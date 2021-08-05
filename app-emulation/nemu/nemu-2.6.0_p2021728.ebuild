@@ -18,13 +18,12 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		SRC_URI="https://github.com/nemuTUI/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/${PN}-${COMMIT_ID}"
-		KEYWORDS="~amd64 ~x86"
 	else
 		SRC_URI="https://github.com/nemuTUI/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-		KEYWORDS="~amd64 ~x86"
 		S="${WORKDIR}/$PN-${MY_PV}/"
 	fi
 fi
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="BSD-2"
 SLOT="0"
