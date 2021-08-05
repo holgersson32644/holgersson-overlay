@@ -33,7 +33,7 @@ IUSE="dbus network-map +ovf +savevm spice +vnc-client"
 RDEPEND="
 	app-emulation/qemu[vnc,virtfs,spice?]
 	dev-db/sqlite:3=
-	sys-libs/ncurses:0=[unicode]
+	>=sys-libs/ncurses-6.2_p20210619:0=
 	virtual/libusb:1
 	virtual/libudev:=
 	dbus? ( sys-apps/dbus )
