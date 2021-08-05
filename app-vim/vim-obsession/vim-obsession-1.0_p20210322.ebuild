@@ -20,12 +20,11 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		SRC_URI="https://github.com/tpope/vim-obsession/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/vim-obsession-${COMMIT_ID}"
-		KEYWORDS="~amd64 ~x86"
 	else
 		SRC_URI="https://github.com/tpope/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-		KEYWORDS="~amd64 ~x86"
 	fi
 fi
+KEYWORDS="~amd64 ~x86"
 
 DOCS=(
 	README.markdown
