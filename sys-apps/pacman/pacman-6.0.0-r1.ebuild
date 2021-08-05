@@ -10,7 +10,7 @@ HOMEPAGE="https://archlinux.org/pacman/ https://wiki.archlinux.org/title/Pacman"
 
 if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://git.archlinux.org/pacman.git"
+	EGIT_REPO_URI="https://gitlab.archlinux.org/pacman/pacman"
 else
 	SRC_URI="https://sources.archlinux.org/other/pacman/${P}.tar.xz"
 	# Do *not* re-add ~x86!
@@ -64,7 +64,6 @@ src_configure() {
 }
 
 pkg_postinst() {
-
 	/usr/bin/pacman-key --init || die
 	/usr/bin/pacman-key --populate archlinux || die
 
