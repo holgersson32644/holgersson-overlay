@@ -3,10 +3,8 @@
 
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
-COMMIT_ID="2008d3755ec3c0da7372ab6de459d135b009ad6a"
-
-
 inherit go-module
+COMMIT_ID="a0b3cae259eab79dcccbdb8d1e392124cf694134"
 
 EGO_SUM=(
 	"github.com/aead/siphash v1.0.1/go.mod"
@@ -45,7 +43,9 @@ EGO_SUM=(
 	"github.com/gdamore/encoding v1.0.0"
 	"github.com/gdamore/encoding v1.0.0/go.mod"
 	"github.com/golang/protobuf v1.2.0/go.mod"
+	"github.com/gorilla/mux v1.8.0"
 	"github.com/gorilla/mux v1.8.0/go.mod"
+	"github.com/gorilla/websocket v1.4.2"
 	"github.com/gorilla/websocket v1.4.2/go.mod"
 	"github.com/hpcloud/tail v1.0.0/go.mod"
 	"github.com/jessevdk/go-flags v0.0.0-20141203071132-1679536dcc89/go.mod"
@@ -87,7 +87,6 @@ EGO_SUM=(
 	"github.com/sasha-s/go-deadlock v0.2.0/go.mod"
 	"github.com/sergi/go-diff v1.0.0"
 	"github.com/sergi/go-diff v1.0.0/go.mod"
-	"github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod"
 	"github.com/stretchr/objx v0.1.0/go.mod"
 	"github.com/stretchr/testify v1.2.2/go.mod"
 	"github.com/stretchr/testify v1.3.0/go.mod"
@@ -154,11 +153,10 @@ EGO_SUM=(
 	"gopkg.in/yaml.v2 v2.4.0/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
+	"maunium.net/go/maulogger/v2 v2.2.4"
 	"maunium.net/go/maulogger/v2 v2.2.4/go.mod"
-	"maunium.net/go/mautrix v0.9.1"
-	"maunium.net/go/mautrix v0.9.1/go.mod"
-	"maunium.net/go/mautrix v0.9.10"
-	"maunium.net/go/mautrix v0.9.10/go.mod"
+	"maunium.net/go/mautrix v0.9.15"
+	"maunium.net/go/mautrix v0.9.15/go.mod"
 	"maunium.net/go/mauview v0.1.2"
 	"maunium.net/go/mauview v0.1.2/go.mod"
 	"maunium.net/go/tcell v0.2.0"
