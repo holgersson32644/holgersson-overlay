@@ -19,16 +19,14 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
-		KEYWORDS="~amd64 ~x86"
 	else
 		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-		KEYWORDS="~amd64 ~x86"
 	fi
 fi
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="PySoundFile-BSD-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="test"
 # Some tests result in sandbox violations.
 RESTRICT="test"
