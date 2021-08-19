@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
-COMMIT_ID="eec6e21194eae9877e73c92ffdf211ebc4b260f3"
+COMMIT_ID="9e521078a2c4fa780772e660bb5b5aaf1c1b641b"
 
 DESCRIPTION="Repository list for Archlinux's binary package manager"
 HOMEPAGE="https://archlinux.org/mirrorlist/"
