@@ -1,11 +1,11 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 2018-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
 inherit vim-plugin
 
-COMMIT_ID="e26c3e8dce4c1332e802cde84f83e61ec8a13986"
+COMMIT_ID="201ffc4e8dbfc3deeb26c6e278980f53d81d7f6a"
 
 DESCRIPTION="vim plugin: Take Notes in rst"
 HOMEPAGE="https://github.com/gu-fan/riv.vim"
