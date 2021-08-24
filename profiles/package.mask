@@ -8,3 +8,9 @@
 # It's not completely working and I do not use it.
 # Removal after 2021-09-01.
 net-nds/ldapcherry
+
+# Nils Freydank <holgersson@posteo.de> (2021-08-24)
+# qTox requires some extensions that need to be packaged first.
+# Currently I've got no time to do so, so I'll probably remove
+# qTox after 2021-10-01.
+net-im/qTox
