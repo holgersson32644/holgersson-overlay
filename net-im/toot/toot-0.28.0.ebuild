@@ -4,14 +4,13 @@
 EAPI="8"
 
 PYTHON_COMPAT=( python3_{9..10} )
-DISTUTILS_USE_SETUPTOOLS=rdepend
 
 inherit distutils-r1
 
 DESCRIPTION="CLI/TUI mastodon client written in python"
 HOMEPAGE="https://github.com/ihabunek/toot/ https://pypi.org/project/toot/"
 
-if [ "${PV}" == "9999" ]; then
+if [ "${PV}" == *9999 ]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ihabunek/toot"
 else
