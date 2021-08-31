@@ -3,15 +3,18 @@
 
 EAPI=7
 
-inherit vim-plugin
-COMMIT_ID="b8d1a5a179dc62fe9e14c0919aa1d4023bdb9ae6"
+LUA_COMPAT=( lua5-{1..4} luajit )
+
+inherit lua-single vim-plugin
+COMMIT_ID="0eccc1a0ebf909aecfa1ac238d940061162ae84f"
 
 DESCRIPTION="vim plugin: Quickstart configurations for the Nvim LSP client"
 HOMEPAGE="https://github.com/neovim/nvim-lspconfig"
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64"
 IUSE="test"
-RESTRICT="test" # need network access
+REQUIRED_USE="${LUA_REQUIRED_USE}"
+RESTRICT="test" # needs network access
 
 if [[ ${PV} == *9999 ]]
 then
@@ -22,7 +25,9 @@ else
 	S="${WORKDIR}/${PN}-${COMMIT_ID}"
 fi
 
-BDEPEND=">=app-editors/neovim-0.5.0"
+BDEPEND="virtual/pkgconfig"
+RDEPEND=">=app-editors/neovim-0.5.0"
+
 DOCS=( README.md )
 
 src_prepare(){
@@ -38,5 +43,9 @@ src_compile(){
 }
 
 src_install(){
+	# We need to get the major and minor version only.
+	insinto /usr/share/lua/$(ver_cut 1-2 $(lua_get_version))
+	doins -r lua/*
+	rm -r lua || die
 	vim-plugin_src_install
 }
