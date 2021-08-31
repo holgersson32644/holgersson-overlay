@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{8..10} )
 DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
-COMMIT_ID="e85d79d4f4a366738eb62cdbb51b63b332d9290f"
+COMMIT_ID="502d7cc206da1f20cc9aef480f93f6b32d576f80"
 
 DESCRIPTION="Run docker-compose files without root with podman"
 HOMEPAGE="https://pypi.org/project/podman-compose/ https://github.com/containers/podman-compose"
