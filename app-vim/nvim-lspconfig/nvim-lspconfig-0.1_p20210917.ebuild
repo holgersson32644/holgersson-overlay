@@ -6,7 +6,7 @@ EAPI=7
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="a0086f6ce80e4de8f441d073570b68612dc7d83b"
+COMMIT_ID="aa0b9fd746d73a5ebbc72c732c645e96423d4504"
 
 DESCRIPTION="vim plugin: Quickstart configurations for the Nvim LSP client"
 HOMEPAGE="https://github.com/neovim/nvim-lspconfig"
