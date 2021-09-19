@@ -1,9 +1,9 @@
 # Copyright 2017-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
-inherit desktop eutils
+inherit desktop
 
 MY_PN="Osmos"
 MY_P="${MY_PN}_${PV}"
