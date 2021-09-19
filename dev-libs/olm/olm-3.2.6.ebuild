@@ -13,15 +13,12 @@ SRC_URI="https://gitlab.matrix.org/matrix-org/${PN}/-/archive/${PV}/${P}.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="doc python test"
+IUSE="python test"
 KEYWORDS="~amd64"
 RESTRICT="!test? ( test )"
+DEPEND="python? ( dev-python/cffi[${PYTHON_USEDEP}] )"
 
-RDEPEND=""
-DEPEND="
-	${RDEPEND}
-	python? ( dev-python/cffi[${PYTHON_USEDEP}] )
-"
+DOCS=( README.md docs/{{,meg}olm,signing}.md )
 
 src_prepare() {
 	default
@@ -59,8 +56,6 @@ src_compile(){
 }
 
 src_install() {
-	use doc && DOCS=( README.md docs/{{,meg}olm,signing}.md )
-
 	cmake_src_install
 
 	if use python; then
@@ -71,5 +66,5 @@ src_install() {
 }
 
 src_test() {
-	BUILD_DIR="${BUILD_DIR}/tests" cmake_src_testwa
+	BUILD_DIR="${BUILD_DIR}/tests" cmake_src_test
 }
