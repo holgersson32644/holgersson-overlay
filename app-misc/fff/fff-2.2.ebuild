@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Fucking Fast File-Manager (written in bash)"
 HOMEPAGE="https://github.com/dylanaraps/fff"
-SRC_URI="https://github.com/dylanaraps/fff/archive/refs/tags/${PV}.tar.gz -> ${PN}.tar.gz"
+SRC_URI="https://github.com/dylanaraps/fff/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
