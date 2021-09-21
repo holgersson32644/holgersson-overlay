@@ -1,12 +1,12 @@
 # Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI="8"
 
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="a9846ea1dbb186188bde72026a932f32831dc85e"
+COMMIT_ID="90f5c9bfc0039befb413ec445fed4a348fd72182"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
