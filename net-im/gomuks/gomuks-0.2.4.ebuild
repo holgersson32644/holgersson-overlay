@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="a0b3cae259eab79dcccbdb8d1e392124cf694134"
+COMMIT_ID="e569c1519a1041c13b3b7fc76daef58bc4454e4d"
 
 EGO_SUM=(
 	"github.com/aead/siphash v1.0.1/go.mod"
@@ -155,8 +155,8 @@ EGO_SUM=(
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
 	"maunium.net/go/maulogger/v2 v2.2.4"
 	"maunium.net/go/maulogger/v2 v2.2.4/go.mod"
-	"maunium.net/go/mautrix v0.9.15"
-	"maunium.net/go/mautrix v0.9.15/go.mod"
+	"maunium.net/go/mautrix v0.9.26"
+	"maunium.net/go/mautrix v0.9.26/go.mod"
 	"maunium.net/go/mauview v0.1.2"
 	"maunium.net/go/mauview v0.1.2/go.mod"
 	"maunium.net/go/tcell v0.2.0"
