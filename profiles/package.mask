@@ -3,8 +3,3 @@
 # syntax:
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
-
-# Nils Freydank <holgersson@posteo.de> (2021-08-31)
-# Packages that I do not use (or use not anymore).
-# Removal after 2021-10-01.
-dev-python/uliengineering
