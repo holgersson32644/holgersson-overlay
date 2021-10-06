@@ -21,4 +21,4 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 DOCS=( README.rst )
-PATCHES=( "${FILESDIR}/${PN}-0.9.4-respect-paths.patch" )
+PATCHES=( "${FILESDIR}/${PN}-0.9.7-respect-paths.patch" )
