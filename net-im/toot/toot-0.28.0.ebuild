@@ -10,7 +10,7 @@ inherit distutils-r1
 DESCRIPTION="CLI/TUI mastodon client written in python"
 HOMEPAGE="https://github.com/ihabunek/toot/ https://pypi.org/project/toot/"
 
-if [ "${PV}" == *9999 ]; then
+if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ihabunek/toot"
 else
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 RESTRICT="test"
 
 DEPEND="
-	dev-python/beautifulsoup[${PYTHON_USEDEP}]
+	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/urwid[${PYTHON_USEDEP}]
 	dev-python/wcwidth[${PYTHON_USEDEP}]
