@@ -175,7 +175,7 @@ if [[ ${PV} == *_p* ]]; then
 	S="${WORKDIR}/${PN}-${COMMIT_ID}"
 else
 	SRC_URI="
-		https://${EGO_PN}/archive/v${PV}.tar.gz
+		https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		${EGO_SUM_SRC_URI}
 	"
 fi
