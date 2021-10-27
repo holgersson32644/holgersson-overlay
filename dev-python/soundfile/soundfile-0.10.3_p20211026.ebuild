@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{9..10} )
 
 inherit distutils-r1
 
-COMMIT_ID="8439fc1c5a88850213de04dc5f1a7d0bf06fab89"
+COMMIT_ID="1bd1529d92382067cb57eb906216a4db2a2d5ec0"
 
 DESCRIPTION="SoundFile is an audio library based on libsndfile, CFFI, and NumPy"
 HOMEPAGE="https://github.com/bastibe/python-soundfile"
