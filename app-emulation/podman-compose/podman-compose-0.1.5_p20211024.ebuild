@@ -1,9 +1,9 @@
 # Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+EAPI="8"
 
-COMMIT_ID="785f7ad8a3fd4998c36341532fc8d0a2cfef9dea"
+COMMIT_ID="c9486c9f3bbdc04ca842d70fd6ccf8ca5d76ec40"
 
 PYTHON_COMPAT=( python3_{8..10} )
 DISTUTILS_USE_SETUPTOOLS=rdepend
