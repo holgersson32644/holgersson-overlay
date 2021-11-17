@@ -3,7 +3,7 @@
 
 EAPI="8"
 
-COMMIT_ID="bc950fbce534b33ae78cf0c02b99f728ad03fd55"
+COMMIT_ID="c635f6791f017572b861d303bb0af7fe347b3e67"
 
 DESCRIPTION="Repository list for Archlinux's binary package manager"
 HOMEPAGE="https://archlinux.org/mirrorlist/"
