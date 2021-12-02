@@ -3,9 +3,9 @@
 
 EAPI="8"
 
-COMMIT_ID="1f989ed133f53ac6db61f45e0271c02bbce862bc"
+COMMIT_ID="e87952997652d333add64353daffbad67f66a32b"
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..10} )
 DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
