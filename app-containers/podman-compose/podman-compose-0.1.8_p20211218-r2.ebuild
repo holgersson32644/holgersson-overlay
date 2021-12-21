@@ -23,16 +23,14 @@ else
 		S="${WORKDIR}/qTox-${PV}"
 	fi
 fi
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
+	app-containers/podman
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 "
-BDEPEND=""
