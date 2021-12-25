@@ -34,3 +34,7 @@ RDEPEND="
 	app-containers/podman
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 "
+DEPEND="
+	${RDEPEND}
+	!app-emulation/podman-compose
+"
