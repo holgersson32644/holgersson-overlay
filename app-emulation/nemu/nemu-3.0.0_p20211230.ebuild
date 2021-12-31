@@ -6,7 +6,7 @@ EAPI="8"
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="0e6ae1e57547d47386421ead49eec43acf0817ec"
+COMMIT_ID="54a2ef0c96af58ee4d512446b82a73068fff61e5"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
