@@ -3,7 +3,7 @@
 
 EAPI="8"
 
-COMMIT_ID="49fe6e7e0f35dd5db8fe46edf29ec5e60848e7d6"
+COMMIT_ID="481c6d0a415bafe02a7dc9c5d1ac9fda9b5698a8"
 
 PYTHON_COMPAT=( python3_{9..10} )
 inherit distutils-r1
