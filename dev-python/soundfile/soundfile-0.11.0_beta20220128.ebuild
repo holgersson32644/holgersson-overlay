@@ -1,4 +1,4 @@
-# Copyright 2016-2021 Gentoo Authors
+# Copyright 2016-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{9..10} )
 
 inherit distutils-r1
 
-COMMIT_ID="d1d125f5749780b0b068b5fcb49d8e84f7f4f045"
+COMMIT_ID="d41120acbc771b2eaaeb17c444aea835b652b188"
 
 DESCRIPTION="SoundFile is an audio library based on libsndfile, CFFI, and NumPy"
 HOMEPAGE="https://github.com/bastibe/python-soundfile"
@@ -16,7 +16,7 @@ if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/bastibe/python-${PN}"
 	inherit git-r3
 else
-	if [[ ${PV} == *_p* ]]; then
+	if [[ (${PV} == *_p*) || (${PV} == *_beta*) ]]; then
 		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 	else
