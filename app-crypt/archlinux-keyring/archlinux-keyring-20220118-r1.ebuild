@@ -8,21 +8,13 @@ HOMEPAGE="https://gitlab.archlinux.org/archlinux/archlinux-keyring"
 SRC_URI="https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/archive/${PV}/archlinux-keyring-${PV}.tar.gz"
 LICENSE="GPL-2" # "GPL" for the Arch linux package
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
-src_prepare() {
-	# bluntly remove the makefile.
-	rm Makefile || die "Couldn't remove Makefile"
-
-	default
-}
+BDEPEND="app-crypt/sequoia-sq"
 
 src_install() {
-	# Take the directory of sys-apps/pacman to have a sane default of
-	# upstream respectivly Archlinux.
-	insinto /usr/share/pacman/keyrings/
-	doins archlinux{.gpg,-trusted,-revoked}
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 }
 
 pkg_postinst() {
