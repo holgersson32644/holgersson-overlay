@@ -1,10 +1,10 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="baddce264f1def28de4b6b34d786de74b46fa4da"
+COMMIT_ID="6525f9ec6675ad8ccd431ab4907112e78d72846a"
 
 EGO_SUM=(
 	"github.com/aead/siphash v1.0.1/go.mod"
