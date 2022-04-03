@@ -1,4 +1,4 @@
-# Copyright 2019-2021 Gentoo Authors
+# Copyright 2019-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
@@ -10,9 +10,6 @@ inherit go-module
 
 MY_PV="${PV/_/-}"
 
-EGO_SUM=( )
-go-module_set_globals
-
 DESCRIPTION="Encrypted overlay filesystem written in Go"
 HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/releases"
 
@@ -22,7 +19,6 @@ if [[ "${PV}" = 9999* ]]; then
 else
 	SRC_URI="
 		https://${EGO_PN}/releases/download/v${MY_PV}/${PN}_v${MY_PV}_src-deps.tar.gz -> ${P}.tar.gz
-		${EGO_SUM_SRC_URI}
 	"
 fi
 
