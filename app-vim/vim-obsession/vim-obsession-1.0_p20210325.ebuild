@@ -1,11 +1,11 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
 inherit vim-plugin
 
-COMMIT_ID="82c9ac5e130c92a46e043dd9cd9e5b48d15e286d"
+COMMIT_ID="d2818a614ec3a5d174c6bb19e87e2eeb207f4900"
 
 DESCRIPTION="vim plugin: mksession automation tool"
 HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=4472 https://github.com/tpope/vim-obsession"
