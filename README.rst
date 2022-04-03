@@ -36,7 +36,7 @@ Run eselect repository from `app-eselect/eselect-repository`:
 
 .. code:: shell
 
-	$ eselect repository enable holgersson-overlay
+    $ eselect repository enable holgersson-overlay
 
 
 Using layman
@@ -45,7 +45,7 @@ Using layman
 Run layman from `app-portage/layman`:
 
 .. code:: shell
- 
+
    $ layman -a holgersson-overlay
 
 and optional for global updates:
@@ -69,7 +69,6 @@ critics and chorus of praise are all welcome!
 GPG key ID: **0x8AD9 60BB A57A F797 88CC FEC0 3CAA 2CA5 14E4 EE5E**
 
 License and copying
-
 ===================
 
 - The contents of this document are licensed under the `CC-BY-SA-3.0 license`.
