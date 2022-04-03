@@ -57,6 +57,16 @@ and optional for global updates:
 
 You might want to set `USE="sync-plugin-portage"` for layman, too.
 
+Add the distfiles archive to GENTOO_MIRRORS
+-------------------------------------------
+
+You may want to optionally add the distfiles mirror of this overlay to your
+GENTOO_MIRRORS configuration in /etc/portage:
+
+.. code:: shell
+
+   GENTOO_MIRRORS="... https://files.holgersson.xyz/gentoo/distfiles/ ..."
+
 Maintainer
 ==========
 
