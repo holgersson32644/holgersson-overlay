@@ -4,7 +4,7 @@
 EAPI="7"
 
 inherit vim-plugin
-COMMIT_ID="4fcd3797e380f2e4c8ea8be31ec6469e6f86f971"
+COMMIT_ID="d5b820655e17c6ccd363885e5614652e4cffae95"
 
 DESCRIPTION="vim plugin:  Multiple cursors plugin for vim/neovim"
 HOMEPAGE="https://github.com/mg979/vim-visual-multi"
