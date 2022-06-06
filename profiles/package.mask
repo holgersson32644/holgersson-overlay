@@ -3,3 +3,9 @@
 # syntax:
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
+#
+# Nils Freydank <holgersson@posteo.de>
+# Upstream seems inactive and I have no time to track their dependencies
+# for possible vulnerabilities and updating them by myself.
+# Removal after 2022-07-06.
+app-misc/gomatrix
