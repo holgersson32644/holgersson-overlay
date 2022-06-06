@@ -1,10 +1,10 @@
 # Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
 inherit vim-plugin
-COMMIT_ID="d5b820655e17c6ccd363885e5614652e4cffae95"
+COMMIT_ID="046d0d5ac5fb2888447d1dd8b7e52fd0314f9766"
 
 DESCRIPTION="vim plugin:  Multiple cursors plugin for vim/neovim"
 HOMEPAGE="https://github.com/mg979/vim-visual-multi"
