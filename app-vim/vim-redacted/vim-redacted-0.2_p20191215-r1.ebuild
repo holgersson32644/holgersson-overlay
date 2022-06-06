@@ -1,7 +1,7 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
 inherit vim-plugin
 
@@ -16,7 +16,6 @@ RESTRICT="!test? ( test )"
 if [[ ${PV} == *9999 ]]
 then
 	inherit git-r3
-#	EGIT_REPO_URI="https://git.holgersson.xyz/mirror/vim-redacted.vim"
 	EGIT_REPO_URI="https://github.com/dbmrq/vim-redacted.git"
 else
 	SRC_URI="https://github.com/dbmrq/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
