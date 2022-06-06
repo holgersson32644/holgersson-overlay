@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,7 +6,7 @@ EAPI="8"
 inherit meson
 
 DESCRIPTION="Archlinux's binary package manager"
-HOMEPAGE="https://archlinux.org/pacman/ https://wiki.archlinux.org/title/Pacman"
+HOMEPAGE="https://archlinux.org/pacman/ https://archlinux.org/packages/core/x86_64/pacman/"
 
 if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
