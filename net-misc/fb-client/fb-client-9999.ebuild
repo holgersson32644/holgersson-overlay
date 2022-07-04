@@ -1,4 +1,4 @@
-# Copyright 2016-2021 Gentoo Authors
+# Copyright 2016-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -30,5 +30,10 @@ RDEPEND="
 	${PYTHON_DEPS}
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
-	clipboard? ( x11-misc/xclip )
+	clipboard? (
+			|| (
+				x11-misc/xclip
+				gui-apps/wl-clipboard
+			)
+		)
 "
