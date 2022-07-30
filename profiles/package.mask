@@ -6,6 +6,7 @@
 #
 # Nils Freydank <holgersson@posteo.de>
 # Never got deoplete really working in the installation from package manger,
-# dropping it here. Use app-vim/coq-nvim instead.
+# dropping it here. You can use app-vim/nvim-cmp instead - or any of the other
+# of the other completion tools.
 # Removal after 2022-08-31.
 app-vim/deoplete
