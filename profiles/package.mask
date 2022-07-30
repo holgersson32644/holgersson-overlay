@@ -4,3 +4,8 @@
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
 #
+# Nils Freydank <holgersson@posteo.de>
+# Never got deoplete really working in the installation from package manger,
+# dropping it here. Use app-vim/coq-nvim instead.
+# Removal after 2022-08-31.
+app-vim/deoplete
