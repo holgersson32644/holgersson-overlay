@@ -42,11 +42,3 @@ src_compile(){
 	# Don't do anything. The Makefile runs only some linter for testing.
 	echo
 }
-
-#src_install(){
-#	# We need to get the major and minor version only.
-#	insinto /usr/share/lua/$(ver_cut 1-2 $(lua_get_version))
-#	doins -r lua/*
-#	rm -r lua || die
-#	vim-plugin_src_install
-#}
