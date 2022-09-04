@@ -23,6 +23,7 @@ else
 	"
 fi
 
+MY_PN="q-dns"
 KEYWORDS="~amd64"
 LICENSE="AGPL-3 Apache-2.0 BSD BSD-2 GPL-3 MIT"
 
@@ -45,14 +46,14 @@ src_compile() {
 }
 
 src_install() {
-	newbin ${PN} q-tool
+	newbin ${PN} ${MY_PN}
 }
 
 pkg_postinst() {
 	if [[ -z "${REPLACING_VERSION}" ]]; then
 		elog ""
 		elog "Please note that the binary is renamed to"
-		elog "\"q-tool\" as app-portage/portage-utils"
+		elog "\"${MY_PN}\" as app-portage/portage-utils"
 		elog "already installs the \"q\" binary."
 	fi
 }
