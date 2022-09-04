@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	newbin ${PN} ${MY_PN}
+	newbin "${PN}" "${MY_PN}"
 }
 
 pkg_postinst() {
