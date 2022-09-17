@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="b5885696b1f2cbdc9f523cc09c2a786919de07d5"
+COMMIT_ID="983453e32cb35533a119725883c04436d16c0120"
 
 DESCRIPTION="neovim plugin: A completion plugin for neovim coded in Lua"
 HOMEPAGE="https://github.com/hrsh7th/nvim-cmp"
