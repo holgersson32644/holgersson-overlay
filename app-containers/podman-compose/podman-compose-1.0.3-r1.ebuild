@@ -5,7 +5,7 @@ EAPI="8"
 
 COMMIT_ID=""
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="Run docker-compose files without root with podman"
@@ -33,8 +33,4 @@ RDEPEND="
 	app-containers/podman
 	dev-python/python-dotenv[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
-"
-DEPEND="
-	${RDEPEND}
-	!app-emulation/podman-compose
 "
