@@ -3,7 +3,7 @@
 
 EAPI="8"
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_10 )
 
 DESCRIPTION="Library to read data from Mi Flora sensor"
 HOMEPAGE="https://github.com/vaporup/ssh-tools"
