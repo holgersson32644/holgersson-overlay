@@ -40,7 +40,7 @@ DOCS=( README.md )
 
 src_compile(){
 	# Don't do anything. The Makefile runs only some linter for testing.
-	echo
+	:;
 }
 
 src_install(){
