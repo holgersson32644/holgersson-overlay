@@ -4,8 +4,8 @@
 	<maintainer type="person">
 		<email>holgersson@posteo.de</email>
 		<name>Nils Freydank</name>
-    </maintainer>
-    <upstream>
+	</maintainer>
+	<upstream>
 		<remote-id type="github">posva/catimg</remote-id>
-    </upstream>
+	</upstream>
 </pkgmetadata>
