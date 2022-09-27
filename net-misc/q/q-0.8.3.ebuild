@@ -11,17 +11,14 @@ HOMEPAGE="https://github.com/natesales/q"
 DESCRIPTION="DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH"
 
 if [[ ${PV} == *_p* ]]; then
-	SRC_URI="
-		https://${EGO_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz
-		https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz
-	"
+	SRC_URI="https://${EGO_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${PN}-${COMMIT_ID}"
 else
-	SRC_URI="
-		https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz
-	"
+	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
+
+# Add the manually vendored tarball.
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
 
 MY_PN="q-dns"
 KEYWORDS="~amd64"
