@@ -67,6 +67,12 @@ GENTOO_MIRRORS configuration in /etc/portage:
 
    GENTOO_MIRRORS="... https://files.holgersson.xyz/gentoo/distfiles/ ..."
 
+The distfiles are updated daily using the tool `emirrordist` from portage:
+
+.. code:: shell
+
+   emirrordist --delete --mirror --repo holgersson-overlay --distfiles <path to webroot>
+
 Maintainer
 ==========
 
