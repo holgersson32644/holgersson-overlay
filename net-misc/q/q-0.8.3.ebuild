@@ -52,5 +52,7 @@ pkg_postinst() {
 		elog "Please note that the binary is renamed to"
 		elog "\"${MY_PN}\" as app-portage/portage-utils"
 		elog "already installs the \"q\" binary."
+		elog "For details see the upstream discussion:"
+		elog "https://github.com/natesales/q/issues/28"
 	fi
 }
