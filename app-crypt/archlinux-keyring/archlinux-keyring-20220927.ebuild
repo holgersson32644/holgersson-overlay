@@ -6,7 +6,8 @@ EAPI="8"
 DESCRIPTION="GnuPG keyring of Archlinux developer keys"
 HOMEPAGE="https://gitlab.archlinux.org/archlinux/archlinux-keyring"
 SRC_URI="https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/archive/${PV}/archlinux-keyring-${PV}.tar.gz"
-LICENSE="GPL-2" # "GPL" for the Arch linux package
+
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
