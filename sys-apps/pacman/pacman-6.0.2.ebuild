@@ -21,12 +21,12 @@ fi
 LICENSE="GPL-2"
 SLOT="0/10"
 
-IUSE="curl doc +gpg test"
+IUSE="doc +gpg test"
 DEPEND="
 	app-crypt/archlinux-keyring
 	app-arch/libarchive:=[lzma]
 	gpg? ( >=app-crypt/gpgme-1.13.0:= )
-	curl? ( net-misc/curl )
+	net-misc/curl
 	dev-libs/openssl:0=
 	virtual/libiconv
 	virtual/libintl
@@ -55,7 +55,6 @@ src_configure() {
 		# full doc with doxygen
 		$(meson_feature doc doxygen)
 		$(meson_feature gpg gpgme)
-		$(meson_use curl libcurl)
 	)
 	if [[ "${PV}" == *9999 ]]; then
 		emesonargs+=( -Duse-git-version=true )
