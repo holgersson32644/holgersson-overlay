@@ -21,6 +21,7 @@ else
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 	else
 		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+		S="${WORKDIR}/python-${P}"
 	fi
 fi
 KEYWORDS="~amd64 ~x86"
