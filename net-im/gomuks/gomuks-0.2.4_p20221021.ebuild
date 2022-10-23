@@ -4,23 +4,19 @@
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="6479ff2e348326ee93763258a8ec34d95129c94c"
+COMMIT_ID="99a5c7caedde389f77e0af85f52f8f3a054b9d24"
 
 DESCRIPTION="A terminal based Matrix client written in Go"
 HOMEPAGE="https://github.com/tulir/gomuks"
 
 if [[ ${PV} == *_p* ]]; then
-	SRC_URI="
-		https://${EGO_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz
-		https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz
-	"
+	SRC_URI="https://${EGO_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${PN}-${COMMIT_ID}"
 else
-	SRC_URI="
-		https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz
-	"
+	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
+# Add the manually vendored tarball.
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
 LICENSE="AGPL-3"
