@@ -6,7 +6,7 @@ EAPI="8"
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="90e0c50d1a35d42c71acd9f745f4d261662eb59d"
+COMMIT_ID="b3c2f3428791fc7b372284643deefcbb09093125"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
@@ -32,14 +32,15 @@ IUSE="dbus network-map +ovf remote-control spice +vnc-client"
 RDEPEND="
 	app-emulation/qemu[vnc,virtfs,spice?]
 	dev-db/sqlite:3=
-	>=sys-libs/ncurses-6.2_p20210619:0=
+	dev-libs/json-c
+	>=sys-libs/ncurses-6.2_p20210619:0=[unicode(+)]
 	virtual/libusb:1
 	virtual/libudev:=
 	dbus? ( sys-apps/dbus )
 	network-map? ( media-gfx/graphviz[svg] )
 	ovf? (
 		dev-libs/libxml2:2
-		app-arch/libarchive
+		app-arch/libarchive:=
 	)
 	remote-control? (
 		dev-libs/openssl:=
@@ -47,6 +48,7 @@ RDEPEND="
 	spice? ( app-emulation/virt-viewer[spice] )
 	vnc-client? ( net-misc/tigervnc )
 "
+
 DEPEND="${RDEPEND}"
 BDEPEND="sys-devel/gettext"
 
@@ -69,23 +71,28 @@ src_configure() {
 	# -DNM_WITH_NCURSES: Don't build the embbeded ncurses.
 	# -DNM_WITH_QEMU: Don't build the embbeded qemu.
 	local mycmakeargs=(
+		-DNM_DEFAULT_DBFILE=".local/share/nemu/nemu.db"
+		-NM_DEFAULT_VMDIR="nemu_vm"
 		-DNM_WITH_NCURSES=off
 		-DNM_WITH_DBUS=$(usex dbus)
 		-DNM_WITH_NETWORK_MAP=$(usex network-map)
 		-DNM_WITH_OVF_SUPPORT=$(usex ovf)
 		-DNM_WITH_QEMU=off
-		-DNM_WITH_SPICE=$(usex spice)
 		-DNM_WITH_REMOTE=$(usex remote-control)
-		-DNM_WITH_VNC_CLIENT=$(usex vnc-client)
 	)
 	cmake_src_configure
 }
 
 pkg_postinst() {
+	elog ""
 	elog "For non-root usage execute script:"
 	elog "/usr/share/nemu/scripts/setup_nemu_nonroot.sh linux <username>"
 	elog "and add udev rule:"
 	elog "cp /usr/share/nemu/scripts/42-net-macvtap-perm.rules /etc/udev/rules.d"
 	elog "Afterwards reboot or reload udev with"
 	elog "udevadm control --reload-rules && udevadm trigger"
+
+	elog ""
+	elog "This ebuild moves the default database path into a different place:"
+	elog "~/.local/share/nemu/nemu.db"
 }
