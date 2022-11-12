@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="99a5c7caedde389f77e0af85f52f8f3a054b9d24"
+COMMIT_ID="26b3c5105360fc8ab1aba12b68d0f538a09523af"
 
 DESCRIPTION="A terminal based Matrix client written in Go"
 HOMEPAGE="https://github.com/tulir/gomuks"
@@ -16,6 +16,7 @@ else
 	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 # Add the manually vendored tarball.
+# Compress the tarball with: xz -9kT0 --memlimit-decompress=256M
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
