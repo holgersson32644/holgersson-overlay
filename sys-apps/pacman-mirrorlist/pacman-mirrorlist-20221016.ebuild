@@ -3,10 +3,10 @@
 
 EAPI="8"
 
-COMMIT_ID="1ce014bee45ebfac83db8cd29f7860eb94fe9474"
+COMMIT_ID="81b0ce32759bcabd864335893f049c0dec6577e9"
 
 DESCRIPTION="Repository list for Archlinux's binary package manager"
-HOMEPAGE="https://archlinux.org/mirrorlist/"
+HOMEPAGE="https://archlinux.org/mirrorlist https://archlinux.org/packages/core/any/pacman-mirrorlist"
 SRC_URI="https://raw.githubusercontent.com/archlinux/svntogit-packages/${COMMIT_ID}/trunk/mirrorlist -> ${P}"
 KEYWORDS="~amd64"
 LICENSE="GPL-2"
