@@ -4,3 +4,9 @@
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
 #
+# Nils Freydank <holgersson@posteo.de> (2022-11-12)
+# As I didn't use this package in a fairly long time I will drop it.
+# Without testing it or actually peeking inside the ebuild the vimwiki-cli
+# package from guru overlay might be a valid replacement.
+# Removal after 2022-12-12
+app-vim/vimwiki
