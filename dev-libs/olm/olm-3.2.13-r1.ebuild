@@ -3,6 +3,7 @@
 
 EAPI="8"
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
 inherit cmake distutils-r1
@@ -45,7 +46,7 @@ src_configure() {
 	fi
 }
 
-src_compile(){
+src_compile() {
 	cmake_src_compile
 
 	if use python; then
