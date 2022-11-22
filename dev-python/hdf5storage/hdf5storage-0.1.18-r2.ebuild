@@ -3,7 +3,8 @@
 
 EAPI="8"
 
-PYTHON_COMPAT=( python3_10 )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="Python library for using HDF5 formatted files"
@@ -26,7 +27,6 @@ BDEPEND="
 	app-arch/unzip
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
 		|| (
 			dev-lang/julia
 			dev-lang/julia-bin
@@ -34,6 +34,4 @@ BDEPEND="
 	)
 "
 
-src_test(){
-	esetup.py nosetests
-}
+distutils_enable_tests nose
