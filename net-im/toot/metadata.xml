@@ -10,6 +10,7 @@
 		instances from the command line.
 	</longdescription>
 	<upstream>
+		<remote-id type="pypi">toot</remote-id>
 		<remote-id type="github">ihabunek/toot</remote-id>
 	</upstream>
 </pkgmetadata>
