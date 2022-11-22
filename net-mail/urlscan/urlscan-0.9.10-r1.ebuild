@@ -3,8 +3,8 @@
 
 EAPI="8"
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_10 )
-
 inherit distutils-r1
 
 DESCRIPTION="Mutt and terminal url selector (similar to urlview)"
