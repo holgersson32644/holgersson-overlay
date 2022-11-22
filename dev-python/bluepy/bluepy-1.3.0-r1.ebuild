@@ -3,8 +3,8 @@
 
 EAPI="8"
 
-PYTHON_COMPAT=( python3_10 )
-
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="Python module for interfacing with BLE devices through Bluez"
@@ -19,12 +19,7 @@ RESTRICT="!test? ( test )"
 
 BDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}]
-	)"
+"
 
-python_test() {
-	nosetests --verbose || die
-	py.test -v -v || die
-}
+distutils_enable_tests nose
+distutils_enable_tests pytest
