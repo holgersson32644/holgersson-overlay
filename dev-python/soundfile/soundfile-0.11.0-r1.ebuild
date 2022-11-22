@@ -3,8 +3,8 @@
 
 EAPI="8"
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
-
 inherit distutils-r1
 
 COMMIT_ID=""
@@ -36,9 +36,6 @@ DEPEND="
 	dev-python/cffi[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	media-libs/libsndfile
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
 
-python_test() {
-	py.test -vv
-}
+distutils_enable_tests pytest
