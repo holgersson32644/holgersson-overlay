@@ -6,7 +6,7 @@ EAPI="8"
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="b3c2f3428791fc7b372284643deefcbb09093125"
+COMMIT_ID="c3029b748fcdf48696278979c8759333c652e4d1"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
@@ -72,7 +72,7 @@ src_configure() {
 	# -DNM_WITH_QEMU: Don't build the embbeded qemu.
 	local mycmakeargs=(
 		-DNM_DEFAULT_DBFILE=".local/share/nemu/nemu.db"
-		-NM_DEFAULT_VMDIR="nemu_vm"
+		-DNM_DEFAULT_VMDIR="nemu_vm"
 		-DNM_WITH_NCURSES=off
 		-DNM_WITH_DBUS=$(usex dbus)
 		-DNM_WITH_NETWORK_MAP=$(usex network-map)
