@@ -5,7 +5,7 @@ EAPI="8"
 
 inherit vim-plugin
 
-COMMIT_ID="7d39576149d17bde3c096fd57e3a2cdae65deaf5"
+COMMIT_ID="fe9d3e1a9a50171e7d316a52e1e56d868e4c1fe5"
 
 DESCRIPTION="vim plugin: mksession automation tool"
 HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=4472 https://github.com/tpope/vim-obsession"
