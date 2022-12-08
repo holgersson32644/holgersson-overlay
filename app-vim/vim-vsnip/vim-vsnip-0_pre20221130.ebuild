@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="6f873418c4dc601d8ad019a5906eddff5088de9b"
+COMMIT_ID="e44026b5394fd79aa0f2118aaf41627ef9c354ee"
 
 DESCRIPTION="Snippet plugin with support for LSP/VSCode snippet format"
 HOMEPAGE="https://github.com/hrsh7th/vim-vsnip"
