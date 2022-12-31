@@ -18,8 +18,9 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc test"
-RESTRICT="!test? ( test )"
+IUSE="doc"
+# Tests need nose which is getting cleaned from main tree.
+RESTRICT="test"
 
 DEPEND=""
 RDEPEND="
@@ -30,12 +31,4 @@ RDEPEND="
 BDEPEND="
 	app-arch/unzip
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? (
-		|| (
-			dev-lang/julia
-			dev-lang/julia-bin
-		)
-	)
 "
-
-distutils_enable_tests nose
