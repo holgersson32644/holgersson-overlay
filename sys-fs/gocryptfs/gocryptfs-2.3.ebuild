@@ -11,7 +11,7 @@ inherit go-module
 MY_PV="${PV/_/-}"
 
 DESCRIPTION="Encrypted overlay filesystem written in Go"
-HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/releases"
+HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/"
 
 if [[ "${PV}" = 9999* ]]; then
 	EGIT_REPO_URI="https://${EGO_PN}"
