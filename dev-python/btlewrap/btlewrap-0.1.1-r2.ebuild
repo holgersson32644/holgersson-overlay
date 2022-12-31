@@ -14,8 +14,8 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="test"
-RESTRICT="!test? ( test )"
+# Some(sic!) tests need nose which is getting cleaned from main tree.
+RESTRICT="test"
 
 DOCS="README.rst"
 
@@ -31,5 +31,4 @@ src_prepare() {
 	default
 }
 
-distutils_enable_tests nose
 distutils_enable_tests pytest
