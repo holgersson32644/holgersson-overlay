@@ -30,7 +30,7 @@ else
 fi
 
 BDEPEND="virtual/pkgconfig"
-RDEPEND=">=app-editors/neovim-0.5.0"
+RDEPEND="app-editors/neovim"
 
 DOCS=( README.md )
 
