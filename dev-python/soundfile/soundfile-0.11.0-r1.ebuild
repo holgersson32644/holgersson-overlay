@@ -10,7 +10,10 @@ inherit distutils-r1
 COMMIT_ID=""
 
 DESCRIPTION="SoundFile is an audio library based on libsndfile, CFFI, and NumPy"
-HOMEPAGE="https://github.com/bastibe/python-soundfile"
+HOMEPAGE="
+	https://github.com/bastibe/python-soundfile
+	https://pypi.org/project/soundfile
+"
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/bastibe/python-${PN}"
