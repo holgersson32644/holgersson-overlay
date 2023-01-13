@@ -9,7 +9,10 @@ PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="Multi key dictionary implementation"
-HOMEPAGE="https://pypi.org/project/multi_key_dict/"
+HOMEPAGE="
+	https://github.com/formiaczek/multi_key_dict
+	https://pypi.org/project/multi_key_dict
+"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
