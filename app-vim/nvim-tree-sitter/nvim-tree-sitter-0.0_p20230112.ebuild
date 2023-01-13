@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="29304e16bbb74559a22cb78ef7c59f086a9cc9e2"
+COMMIT_ID="9a257d989a526c413a28c252c4ec9113a7d35a28"
 
 DESCRIPTION="neovim plugin: tree sitter support for syntax highlighting"
 HOMEPAGE="https://github.com/nvim-treesitter/nvim-treesitter"
@@ -34,7 +34,6 @@ KEYWORDS="~amd64"
 RDEPEND="
 	app-editors/neovim
 	dev-libs/tree-sitter-meta
-	!!app-vim/nvim-treesitter
 "
 
 DOCS=(
