@@ -1,10 +1,10 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 
 inherit vim-plugin
-COMMIT_ID="902f674b9e8a703fad9dafdda9d8f7c88ecf689f"
+COMMIT_ID="ec601d38a2e9309109f405ce038c5a6ce774f1a9"
 
 DESCRIPTION="vim plugin: in-buffer formatter runner"
 HOMEPAGE="https://github.com/sbdchd/neoformat"
