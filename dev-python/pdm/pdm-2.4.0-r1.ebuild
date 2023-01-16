@@ -21,10 +21,12 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
+	dev-python/cachecontrol[${PYTHON_USEDEP}]
 	dev-python/findpython[${PYTHON_USEDEP}]
-	dev-python/unearth[${PYTHON_USEDEP}]
 	dev-python/pyproject-hooks[${PYTHON_USEDEP}]
 	dev-python/shellingham[${PYTHON_USEDEP}]
+	dev-python/unearth[${PYTHON_USEDEP}]
+	dev-python/virtualenv[${PYTHON_USEDEP}]
 "
 BDEPEND=""
 
