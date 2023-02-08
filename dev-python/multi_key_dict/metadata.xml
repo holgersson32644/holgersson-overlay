@@ -6,6 +6,7 @@
 		<name>Nils Freydank</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="github">formiaczek/multi_key_dict</remote-id>
 		<remote-id type="pypi">multi_key_dict</remote-id>
 	</upstream>
 </pkgmetadata>
