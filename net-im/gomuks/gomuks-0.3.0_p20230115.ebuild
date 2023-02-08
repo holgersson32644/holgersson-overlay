@@ -1,10 +1,10 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="68e9d6e9818bd9b781be43a2e2b9759251c5975e"
+COMMIT_ID="2751b186fa05a4c6130beeb6537c44a7f2abd91a"
 
 DESCRIPTION="A terminal based Matrix client written in Go"
 HOMEPAGE="https://github.com/tulir/gomuks"
