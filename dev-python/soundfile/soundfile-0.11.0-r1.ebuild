@@ -1,4 +1,4 @@
-# Copyright 2016-2022 Gentoo Authors
+# Copyright 2016-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -12,7 +12,7 @@ COMMIT_ID=""
 DESCRIPTION="SoundFile is an audio library based on libsndfile, CFFI, and NumPy"
 HOMEPAGE="
 	https://github.com/bastibe/python-soundfile
-	https://pypi.org/project/soundfile
+	https://pypi.org/project/soundfile/
 "
 
 if [[ ${PV} == *9999 ]]; then
