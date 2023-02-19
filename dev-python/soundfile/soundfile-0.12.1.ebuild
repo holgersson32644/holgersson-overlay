@@ -20,10 +20,10 @@ if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 else
 	if [[ (${PV} == *_p*) || (${PV} == *_beta*) ]]; then
-		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.gh.tar.gz"
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 	else
-		SRC_URI="https://github.com/bastibe/python-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 		S="${WORKDIR}/python-${P}"
 	fi
 fi
