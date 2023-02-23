@@ -31,7 +31,7 @@ RDEPEND="
 	dev-python/pyproject-hooks[${PYTHON_USEDEP}]
 	dev-python/python-dotenv[${PYTHON_USEDEP}]
 	dev-python/requests-toolbelt[${PYTHON_USEDEP}]
-	>=dev-python/resolvelib-0.9.0[${PYTHON_USEDEP}]
+	dev-python/resolvelib[${PYTHON_USEDEP}]
 	dev-python/rich[${PYTHON_USEDEP}]
 	dev-python/shellingham[${PYTHON_USEDEP}]
 	dev-python/tomlkit[${PYTHON_USEDEP}]
