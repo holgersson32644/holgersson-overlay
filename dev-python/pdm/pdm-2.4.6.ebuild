@@ -5,7 +5,7 @@ EAPI="8"
 
 DISTUTILS_USE_PEP517=pdm
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Python package and dependcy manager supporting latest PEPs"
 HOMEPAGE="
@@ -13,7 +13,6 @@ HOMEPAGE="
 	https://github.com/pdm-project/pdm
 	https://pypi.org/project/pdm/
 "
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -26,8 +25,10 @@ RDEPEND="
 	dev-python/cachecontrol[${PYTHON_USEDEP}]
 	dev-python/certifi[${PYTHON_USEDEP}]
 	dev-python/findpython[${PYTHON_USEDEP}]
+	dev-python/importlib_metadata[${PYTHON_USEDEP}]
 	dev-python/installer[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
+	dev-python/platformdirs[${PYTHON_USEDEP}]
 	dev-python/pyproject-hooks[${PYTHON_USEDEP}]
 	dev-python/python-dotenv[${PYTHON_USEDEP}]
 	dev-python/requests-toolbelt[${PYTHON_USEDEP}]
