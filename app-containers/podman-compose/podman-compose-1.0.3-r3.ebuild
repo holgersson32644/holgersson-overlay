@@ -6,12 +6,15 @@ EAPI="8"
 COMMIT_ID=""
 
 DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Run docker-compose files without root with podman"
-HOMEPAGE="https://pypi.org/project/podman-compose/ https://github.com/containers/podman-compose"
-
+HOMEPAGE="
+	https://github.com/containers/podman-compose
+	https://pypi.org/project/podman-compose/
+"
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/containers/podman-compose.git"
 	inherit git-r3
@@ -19,8 +22,6 @@ else
 	if [[ ${PV} == *_p* ]]; then
 		SRC_URI="https://github.com/containers/podman-compose/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}/podman-compose-${COMMIT_ID}"
-	else
-		SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 	fi
 fi
 KEYWORDS="~amd64"
