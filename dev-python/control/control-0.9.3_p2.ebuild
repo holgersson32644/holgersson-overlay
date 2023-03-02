@@ -11,7 +11,11 @@ inherit distutils-r1 pypi
 MY_PV="0.9.3.post2"
 
 DESCRIPTION="Python Control Systems Library"
-HOMEPAGE="https://python-control.readthedocs.io/ https://pypi.org/project/control/"
+HOMEPAGE="
+	https://python-control.readthedocs.io/
+	https://github.com/python-control/python-control
+	https://pypi.org/project/control/
+"
 
 LICENSE="BSD"
 SLOT="0"
