@@ -5,7 +5,7 @@ EAPI="8"
 
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Python library for using HDF5 formatted files, incl. MAT files"
 HOMEPAGE="
@@ -13,7 +13,6 @@ HOMEPAGE="
 	https://pythonhosted.org/hdf5storage/
 	https://pypi.org/project/hdf5storage/
 "
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
