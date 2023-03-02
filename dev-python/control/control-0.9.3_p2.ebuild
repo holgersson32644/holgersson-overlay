@@ -5,13 +5,13 @@ EAPI="8"
 
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+inherit distutils-r1 pypi
+
 # Hard-code the version for upstream's weird 0.9.3_post2 release.
 MY_PV="0.9.3.post2"
 
 DESCRIPTION="Python Control Systems Library"
 HOMEPAGE="https://python-control.readthedocs.io/ https://pypi.org/project/control/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
