@@ -13,19 +13,8 @@ else
 : ${DENDRITE_RC_CONFIG:=${RC_PREFIX%/}/etc/conf.d/dendrite}
 fi
 
-if [ -n "${DENDRITE_BINARY}" ] ; then
-	: # Do nothing, DENDRITE_BINARY is set externally.
-elif [ -z "${DENDRITE_MODE}" -o "${DENDRITE_MODE}" == "monolith" ] ; then
-	DENDRITE_BINARY=${RC_PREFIX%/}/usr/bin/dendrite-monolith-server
-elif [ "${DENDRITE_MODE}" == "polylith" ] ; then
-	DENDRITE_BINARY:=${RC_PREFIX%/}/usr/bin/dendrite-polylith-multi
-else
-	echo "Unknown dendrite mode: \"${DENDRITE_MODE}\"." >&2
-	echo "Check the DENDRITE_MODE variable in ${DENDRITE_RC_CONFIG}" >&2
-	exit 1
-fi
+command="${RC_PREFIX%/}/usr/bin/dendrite"
 
-command="${DENDRITE_BINARY}"
 pidfile="${DENDRITE_PIDFILE}"
 command_background=true
 command_user="dendrite:dendrite"

@@ -1,9 +1,13 @@
 # Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# TODO:
+# 1. fix LICENSE field
+# 2. fix init scripts
+
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite/"
-inherit go-module
+inherit go-module systemd
 COMMIT_ID=""
 
 DESCRIPTION="Matrix homeserver written in go"
@@ -20,7 +24,6 @@ fi
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
-# FIXME
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
@@ -54,24 +57,31 @@ src_test() {
 }
 
 src_install() {
-	# Install the binaries from bin and prefix everything with "dendrite".
+	# Install files from bin, prefix with 'dendrite' if necessary.
 	newbin bin/create-account dendrite-create-account
+
 	dobin bin/dendrite-demo-pinecone
 	dobin bin/dendrite-demo-yggdrasil
-	dobin bin/dendrite-monolith-server
-	dobin bin/dendrite-polylith-multi
+	dobin bin/dendrite
 	dobin bin/dendrite-upgrade-tests
+
+	# prefix
 	newbin bin/furl dendrite-furl
 	newbin bin/generate-config dendrite-generate-config
 	newbin bin/generate-keys dendrite-generate-keys
 	newbin bin/resolve-state dendrite-resolve-state
 
+	# Provide a sample configuration.
 	dodir "/etc/dendrite"
 	insinto /etc/dendrite
-	doins "${S}/dendrite-sample.monolith.yaml"
-	doins "${S}/dendrite-sample.polylith.yaml"
+	doins "${S}/dendrite-sample.yaml"
+
+	# Install init scripts for OpenRC
 	newinitd "${FILESDIR}"/dendrite.initd dendrite
 	newconfd "${FILESDIR}"/dendrite.confd dendrite
+
+	# Install a systemd unit.
+	systemd_newunit "${FILESDIR}"/dendrite.service dendrite.service
 
 	keepdir "/var/log/dendrite"
 	fowners dendrite:dendrite "/var/log/dendrite"
