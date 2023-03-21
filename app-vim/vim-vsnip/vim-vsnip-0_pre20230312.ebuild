@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="e44026b5394fd79aa0f2118aaf41627ef9c354ee"
+COMMIT_ID="7753ba9c10429c29d25abfd11b4c60b76718c438"
 
 DESCRIPTION="Snippet plugin with support for LSP/VSCode snippet format"
 HOMEPAGE="https://github.com/hrsh7th/vim-vsnip"
