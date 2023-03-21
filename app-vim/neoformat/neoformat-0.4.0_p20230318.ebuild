@@ -4,7 +4,7 @@
 EAPI="8"
 
 inherit vim-plugin
-COMMIT_ID="2e9fd3a7cbdce0c90379c8bc52e0bca6726eba81"
+COMMIT_ID="ae79cb838b8ed106a083370f3eb3da88ce834c69"
 
 DESCRIPTION="vim plugin: in-buffer formatter runner"
 HOMEPAGE="https://github.com/sbdchd/neoformat"
