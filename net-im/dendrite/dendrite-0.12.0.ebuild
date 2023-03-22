@@ -20,7 +20,23 @@ fi
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
-LICENSE="Apache-2.0"
+# There are some third-party licenses for test suites
+# like non-commercial clauses inside for ccgo / CompCert.
+# Restrict test execution until that stuff is sorted out.
+RESTRICT="test"
+
+LICENSE="
+	Apache-2.0
+	BSD
+	BSD-2
+	CC0-1.0
+	ISC
+	LGPL-3
+	MIT
+	MPL-2.0
+	Unlicense
+	ZLIB
+"
 SLOT="0"
 IUSE=""
 
