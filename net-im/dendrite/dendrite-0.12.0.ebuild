@@ -1,10 +1,6 @@
 # Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# TODO:
-# 1. fix LICENSE field
-# 2. fix init scripts
-
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite/"
 inherit go-module systemd
