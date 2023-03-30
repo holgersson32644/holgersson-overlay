@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">firecat53/urlscan</remote-id>
+		<remote-id type="pypi">control</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -5,11 +5,13 @@ EAPI="8"
 
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Mutt and terminal url selector (similar to urlview)"
-HOMEPAGE="https://github.com/firecat53/urlscan"
-SRC_URI="https://github.com/firecat53/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="
+	https://github.com/firecat53/urlscan
+	https://pypi.org/project/urlscan
+"
 
 LICENSE="GPL-2"
 SLOT="0"
