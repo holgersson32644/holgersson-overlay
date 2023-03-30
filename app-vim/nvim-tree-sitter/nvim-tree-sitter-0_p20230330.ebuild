@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="8ae2c8ff495fdf0f0f07edcd7afe271f15a70562"
+COMMIT_ID="09275650b8ae262ac173398976093b60e36e01e8"
 
 DESCRIPTION="neovim plugin: tree sitter support for syntax highlighting"
 HOMEPAGE="https://github.com/nvim-treesitter/nvim-treesitter"
@@ -19,10 +19,10 @@ then
 	EGIT_REPO_URI="https://github.com/nvim-treesitter/nvim-treesitter.git"
 else
 	if [[ ${PV} == *_p* ]]; then
-		SRC_URI="https://github.com/nvim-treesitter/${MY_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/nvim-treesitter/${MY_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.gh.tar.gz"
 		S="${WORKDIR}/${MY_PN}-${COMMIT_ID}"
 	else
-		SRC_URI="https://github.com/nvim-treesitter/${MY_PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+		SRC_URI="https://github.com/nvim-treesitter/${MY_PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 		S="${WORKDIR}/${MY_PN}-${PV}"
 	fi
 fi
