@@ -25,7 +25,7 @@ RDEPEND="
 	dev-python/cachecontrol[${PYTHON_USEDEP}]
 	dev-python/certifi[${PYTHON_USEDEP}]
 	dev-python/findpython[${PYTHON_USEDEP}]
-	dev-python/importlib_metadata[${PYTHON_USEDEP}]
+	dev-python/importlib-metadata[${PYTHON_USEDEP}]
 	dev-python/installer[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
 	dev-python/platformdirs[${PYTHON_USEDEP}]
@@ -38,9 +38,17 @@ RDEPEND="
 	dev-python/tomlkit[${PYTHON_USEDEP}]
 	dev-python/tomli[${PYTHON_USEDEP}]
 	dev-python/typing-extensions[${PYTHON_USEDEP}]
-	dev-python/unearth[${PYTHON_USEDEP}]
+	>=dev-python/unearth-0.9.0[${PYTHON_USEDEP}]
 	dev-python/virtualenv[${PYTHON_USEDEP}]
 "
 BDEPEND=""
 
 distutils_enable_tests pytest
+
+src_prepare(){
+	default
+
+	# workaround until "dev-python/pdm-pep517" is renamed into "pdm-backend".
+	sed -i "s/pdm-backend/pdm-pep517/" pyproject.toml || die
+	sed -i "s/pdm.backend/pdm.pep517.api/" pyproject.toml || die
+}
