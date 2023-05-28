@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -7,7 +7,7 @@ COMMIT_ID=""
 
 DISTUTILS_USE_PEP517=setuptools
 PYPI_NO_NORMALIZE=1
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_11 )
 inherit distutils-r1 pypi
 
 DESCRIPTION="Run docker-compose files without root with podman"
@@ -32,6 +32,7 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
+	app-containers/dnsname
 	app-containers/podman
 	dev-python/python-dotenv[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
