@@ -8,7 +8,4 @@
 		<email>holgersson@posteo.de</email>
 		<name>Nils Freydank</name>
 	</maintainer>
-	<use>
-		<flag name="encryption">Enable encryption using <pkg>dev-libs/olm</pkg></flag>
-	</use>
 </pkgmetadata>
