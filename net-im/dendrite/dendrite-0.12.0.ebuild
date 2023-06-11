@@ -17,7 +17,7 @@ else
 fi
 # Add the manually vendored tarball.
 # Compress the tarball with: xz -9kT0 --memlimit-decompress=256M
-SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/${P}-deps.tar.xz"
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/holgersson-overlay/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
 # There are some third-party licenses for test suites
