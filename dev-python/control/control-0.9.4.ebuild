@@ -4,11 +4,8 @@
 EAPI="8"
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_11 )
 inherit distutils-r1 pypi
-
-# Hard-code the version for upstream's weird 0.9.3_post2 release.
-MY_PV="0.9.3.post2"
 
 DESCRIPTION="Python Control Systems Library"
 HOMEPAGE="
@@ -22,7 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # Tests need nose which is getting cleaned from main tree.
 RESTRICT="test"
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 BDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
