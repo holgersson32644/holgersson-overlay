@@ -1,0 +1,18 @@
+# Nils Freydank <holgersson@posteo.de> (2023-06-11)
+
+Respect the gentoo paths for documentation - i.e. manual
+installation of the documents.
+
+Updating the patch from 2021-10-06 using setup.py to pyproject.toml
+
+--- a/pyproject.toml	2023-06-11 14:30:00.000000000 +0200
++++ b/pyproject.toml	2023-06-11 14:30.00.000000001 +0200
+@@ -49,8 +49,6 @@
+ version-file = "urlscan/_version.py"
+
+ [tool.hatch.build.targets.wheel.shared-data]
+-LICENSE = "share/doc/urlscan/LICENSE"
+-"README.md" = "share/doc/urlscan/README.md"
+ "urlscan.1" = "share/man/man1/urlscan.1"
+
+ [tool.hatch.build.targets.sdist]

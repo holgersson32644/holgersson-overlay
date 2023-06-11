@@ -3,15 +3,17 @@
 
 EAPI="8"
 
-DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+DISTUTILS_USE_PEP517=hatchling
+PYTHON_COMPAT=( python3_11 )
 inherit distutils-r1 pypi
 
 DESCRIPTION="Mutt and terminal url selector (similar to urlview)"
 HOMEPAGE="
 	https://github.com/firecat53/urlscan
-	https://pypi.org/project/urlscan
+	https://pypi.org/project/urlscan/
 "
+
+SRC_URI+=" https://raw.githubusercontent.com/firecat53/urlscan/1.0.0/urlscan.1 -> ${P}-manpage"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,4 +25,11 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 DOCS=( README.md )
-PATCHES=( "${FILESDIR}/${PN}-0.9.7-respect-paths.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.0.0-respect-paths.patch" )
+
+src_install() {
+	default
+	distutils-r1_src_install
+
+	newman "${DISTDIR}/${P}-manpage" "${PN}.1"
+}
