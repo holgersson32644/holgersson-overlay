@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite/"
 inherit go-module systemd
-COMMIT_ID="11b557097c6745309c09b58f681080d3fcc4f9f5"
+COMMIT_ID="8ea1a11105ea7e66aa459537bcbef0de606147cd"
 
 DESCRIPTION="Matrix homeserver written in go"
 HOMEPAGE="https://matrix.org https://github.com/matrix-org/dendrite"
@@ -17,7 +17,7 @@ else
 fi
 # Add the manually vendored tarball.
 # Compress the tarball with: xz -9kT0 --memlimit-decompress=256M
-SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/holgersson-overlay/${P}-deps.tar.xz"
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/holgersson-overlay/holgersson-overlay/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
 # There are some third-party licenses for test suites
