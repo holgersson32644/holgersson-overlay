@@ -13,7 +13,7 @@ HOMEPAGE="
 	https://pypi.org/project/urlscan/
 "
 
-SRC_URI+=" https://raw.githubusercontent.com/firecat53/urlscan/1.0.0/urlscan.1 -> ${P}-manpage"
+SRC_URI+=" https://raw.githubusercontent.com/firecat53/urlscan/${PV}/urlscan.1 -> ${P}-manpage"
 
 LICENSE="GPL-2"
 SLOT="0"
