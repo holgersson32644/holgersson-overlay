@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="9c9e12f0333a1686171a1315b237e9f6c49ff41d"
+COMMIT_ID="68c619f2e3bbace5d2e885dbe44289dc68d776e5"
 
 DESCRIPTION="neovim plugin: tree sitter support for syntax highlighting"
 HOMEPAGE="https://github.com/nvim-treesitter/nvim-treesitter"
