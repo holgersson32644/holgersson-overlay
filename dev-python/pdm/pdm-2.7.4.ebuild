@@ -3,7 +3,7 @@
 
 EAPI="8"
 
-DISTUTILS_USE_PEP517=pdm
+DISTUTILS_USE_PEP517=pdm-backend
 PYTHON_COMPAT=( python3_11 )
 inherit distutils-r1 pypi
 
@@ -44,11 +44,3 @@ RDEPEND="
 BDEPEND=""
 
 distutils_enable_tests pytest
-
-src_prepare(){
-	default
-
-	# workaround until "dev-python/pdm-pep517" is renamed into "pdm-backend".
-	sed -i "s/pdm-backend/pdm-pep517/" pyproject.toml || die
-	sed -i "s/pdm.backend/pdm.pep517.api/" pyproject.toml || die
-}
