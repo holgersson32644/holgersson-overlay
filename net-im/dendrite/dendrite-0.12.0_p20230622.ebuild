@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
-EGO_PN="github.com/matrix-org/dendrite/"
+EGO_PN="github.com/matrix-org/dendrite"
 inherit go-module systemd
-COMMIT_ID="420e7ec81fedf9ff531c75ece4c80a9b63046ba9"
+COMMIT_ID="45082d4dcefadceada1b4374f3876365887cfd4a"
 
 DESCRIPTION="Matrix homeserver written in go"
 HOMEPAGE="https://matrix.org https://github.com/matrix-org/dendrite"
