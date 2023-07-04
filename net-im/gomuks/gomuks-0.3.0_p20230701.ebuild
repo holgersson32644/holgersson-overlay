@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/tulir/gomuks"
 inherit go-module
-COMMIT_ID="373139c7bfd9646dba6bccbbff2eab5fe65ef45a"
+COMMIT_ID="b3f04100038a1c73a2fc491b6366d4b16fa026bd"
 
 DESCRIPTION="A terminal based Matrix client written in Go"
 HOMEPAGE="https://github.com/tulir/gomuks"
