@@ -39,7 +39,6 @@ src_compile() {
 		-ldflags="-X ${EGO_PN}/config.GitCommit=${GIT_COMMIT} -s -w"
 		-mod mod -v -work -x
 	)
-
 	go build  "${mygobuildargs[@]}" . || die "go build failed"
 }
 
