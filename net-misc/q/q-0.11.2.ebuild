@@ -33,6 +33,8 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
+	export CGO_ENABLED=0
+
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
