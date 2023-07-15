@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite"
 inherit go-module systemd
-COMMIT_ID="2ee03fd65721e6a95ad3c6b4f2da7cd8b762041a"
+COMMIT_ID="33ff3095722d063673f7168dd63bb2aef8ca735d"
 
 DESCRIPTION="Matrix homeserver written in go"
 HOMEPAGE="https://matrix.org https://github.com/matrix-org/dendrite"
