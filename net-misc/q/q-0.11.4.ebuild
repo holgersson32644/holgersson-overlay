@@ -3,7 +3,7 @@
 
 EAPI="8"
 EGO_PN="github.com/natesales/q"
-COMMIT_ID=""
+COMMIT_ID="83c169f40f0895ae4b5b210f20b0a46fda2e0d9d"
 
 inherit go-module
 
@@ -38,7 +38,7 @@ src_compile() {
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
-		-ldflags="-X ${EGO_PN}/config.GitCommit=${GIT_COMMIT} -s -w"
+		-ldflags="-X ${EGO_PN}/config.GitCommit=${COMMIT_ID} -s -w"
 		-mod mod -v -work -x
 	)
 	go build  "${mygobuildargs[@]}" . || die "go build failed"
