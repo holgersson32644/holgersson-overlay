@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,7 +6,7 @@ EAPI="8"
 LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua-single vim-plugin
-COMMIT_ID="983453e32cb35533a119725883c04436d16c0120"
+COMMIT_ID="c4e491a87eeacf0408902c32f031d802c7eafce8"
 
 DESCRIPTION="neovim plugin: A completion plugin for neovim coded in Lua"
 HOMEPAGE="https://github.com/hrsh7th/nvim-cmp"
