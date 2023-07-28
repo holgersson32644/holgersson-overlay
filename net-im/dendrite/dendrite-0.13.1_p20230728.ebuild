@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite"
 inherit go-module systemd
-COMMIT_ID="33ff3095722d063673f7168dd63bb2aef8ca735d"
+COMMIT_ID="3f727485d6e21a603e4df1cb31c3795cc1023caa"
 
 DESCRIPTION="Matrix homeserver written in go"
 HOMEPAGE="https://matrix.org https://github.com/matrix-org/dendrite"
@@ -16,7 +16,9 @@ else
 	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 # Add the manually vendored tarball.
-# Compress the tarball with: xz -9kT0 --memlimit-decompress=256M
+# Build tar archive with these flags for reproducabilty:
+# --mtime="1970-01-01" --sort=name --owner=portage --group=portage"
+# Compress the tarball with: xz -9eT0k --memlimit-decompress=256M
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
