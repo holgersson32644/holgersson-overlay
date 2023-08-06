@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/matrix-org/dendrite"
 inherit go-module systemd
-COMMIT_ID="3f727485d6e21a603e4df1cb31c3795cc1023caa"
+COMMIT_ID="294eff8a7f42f11b3559ca941468c766358fcae1"
 
 DESCRIPTION="Matrix homeserver written in go"
 HOMEPAGE="https://matrix.org https://github.com/matrix-org/dendrite"
@@ -16,10 +16,14 @@ else
 	SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 # Add the manually vendored tarball.
-# Build tar archive with these flags for reproducabilty:
-# --mtime="1970-01-01" --sort=name --owner=portage --group=portage"
-# Compress the tarball with: xz -9eT0k --memlimit-decompress=256M
-SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/${P}-deps.tar.xz"
+# 1) Create a tar archive optimized to reproduced by other users or devs.
+# 2) Compress the archive using XZ limiting decompression memory for
+#    pretty constraint systems.
+# Use something like:
+# tar cf $P-deps.tar go-mod \
+#       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
+# xz -k -9eT0 --memlimit-decompress=256M $P-deps.tar
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
 
 KEYWORDS="~amd64"
 # There are some third-party licenses for test suites
