@@ -6,7 +6,7 @@ EAPI="8"
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="e8c206775e8fb288d79fdc73d703e05d8e93ed31"
+COMMIT_ID="b3ed6a74c1b957da16f584a39cf4fc99d372cf45"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
@@ -27,15 +27,13 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="dbus network-map +ovf remote-control spice +vnc-client"
+IUSE="dbus network-map +ovf remote-control spice +usb +vnc-client"
 
 RDEPEND="
 	app-emulation/qemu[vnc,virtfs,spice?]
 	dev-db/sqlite:3=
 	dev-libs/json-c
-	>=sys-libs/ncurses-6.2_p20210619:0=[unicode(+)]
-	virtual/libusb:1
-	virtual/libudev:=
+	sys-libs/ncurses:=[unicode(+)]
 	dbus? ( sys-apps/dbus )
 	network-map? ( media-gfx/graphviz[svg] )
 	ovf? (
@@ -47,6 +45,10 @@ RDEPEND="
 	)
 	spice? ( app-emulation/virt-viewer[spice] )
 	vnc-client? ( net-misc/tigervnc )
+	usb? (
+		virtual/libusb:1
+		|| ( sys-apps/systemd-utils[udev] sys-apps/systemd )
+	)
 "
 
 DEPEND="${RDEPEND}"
@@ -79,6 +81,7 @@ src_configure() {
 		-DNM_WITH_OVF_SUPPORT=$(usex ovf)
 		-DNM_WITH_QEMU=off
 		-DNM_WITH_REMOTE=$(usex remote-control)
+		-DNM_WITH_USB=$(usex usb)
 	)
 	cmake_src_configure
 }
