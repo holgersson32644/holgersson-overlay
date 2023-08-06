@@ -18,8 +18,14 @@ else
 fi
 
 # Add the manually vendored tarball.
-# Compress the tarball with: xz -9kT0 --memlimit-decompress=256M
-SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay/${P}-deps.tar.xz"
+# 1) Create a tar archive optimized to reproduced by other users or devs.
+# 2) Compress the archive using XZ limiting decompression memory for
+#    pretty constraint systems.
+# Use something like:
+# tar cf $P-deps.tar go-mod \
+#       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
+# xz -k -9eT0 --memlimit-decompress=256M $P-deps.tar
+SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
 
 MY_PN="q-dns"
 KEYWORDS="~amd64"
