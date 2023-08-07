@@ -3,11 +3,14 @@
 
 EAPI="8"
 
-inherit go-module tmpfiles systemd
+inherit go-module systemd tmpfiles
 
 MY_PV="${PV/_rc/-rc}"
 DESCRIPTION="A painless self-hosted Git service"
-HOMEPAGE="https://gitea.io https://github.com/go-gitea/gitea"
+HOMEPAGE="
+	https://gitea.io
+	https://github.com/go-gitea/gitea
+"
 
 if [[ ${MY_PV} == *9999 ]]
 then
@@ -20,13 +23,14 @@ fi
 
 LICENSE="Apache-2.0 BSD BSD-2 ISC MIT MPL-2.0"
 SLOT="0"
-IUSE="+acct pam sqlite +pie"
+IUSE="+acct pam +pie sqlite"
 RESTRICT="test"
 
 DEPEND="
 	acct? (
 		acct-group/git
-		acct-user/git[gitea] )
+		acct-user/git[gitea]
+	)
 	pam? ( sys-libs/pam )
 "
 RDEPEND="
@@ -35,30 +39,12 @@ RDEPEND="
 "
 
 DOCS=(
-	custom/conf/app.example.ini CONTRIBUTING.md README.md
+	custom/conf/app.example.ini
+	CONTRIBUTING.md
+	README.md
 )
 
 S="${WORKDIR}/${PN}-src-${MY_PV}"
-
-src_prepare() {
-	default
-
-	local sedcmds=(
-		-e "s#^ROOT =#ROOT = ${EPREFIX}/var/lib/gitea/gitea-repositories#"
-		-e "s#^ROOT_PATH =#ROOT_PATH = ${EPREFIX}/var/log/gitea#"
-		-e "s#^APP_DATA_PATH = data#APP_DATA_PATH = ${EPREFIX}/var/lib/gitea/data#"
-		-e "s#^HTTP_ADDR = 0.0.0.0#HTTP_ADDR = 127.0.0.1#"
-		-e "s#^MODE = console#MODE = file#"
-		-e "s#^LEVEL = Trace#LEVEL = Info#"
-		-e "s#^LOG_SQL = true#LOG_SQL = false#"
-		-e "s#^DISABLE_ROUTER_LOG = false#DISABLE_ROUTER_LOG = true#"
-	)
-
-	sed -i "${sedcmds[@]}" custom/conf/app.example.ini || die
-	if use sqlite ; then
-		sed -i -e "s#^DB_TYPE = .*#DB_TYPE = sqlite3#" custom/conf/app.example.ini || die
-	fi
-}
 
 src_compile() {
 	local gitea_tags=(
@@ -111,9 +97,4 @@ src_install() {
 
 pkg_postinst() {
 	tmpfiles_process gitea.conf
-
-	ewarn "The default JWT signing algorithm changed in 1.15.0 from HS256 (symmetric) to"
-	ewarn "RS256 (asymmetric). Gitea OAuth2 tokens (and potentially client secrets) will"
-	ewarn "need to be regenerated unless you change your JWT_SIGNING_ALGORITHM back to HS256."
-	ewarn "For other breaking changes, see <https://github.com/go-gitea/gitea/releases/tag/v1.15.0>."
 }
