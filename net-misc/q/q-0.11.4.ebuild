@@ -36,7 +36,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="<dev-lang/go-1.21.0"
 
 src_compile() {
 	export CGO_ENABLED=0
