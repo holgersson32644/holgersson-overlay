@@ -3,7 +3,7 @@
 
 EAPI="8"
 EGO_PN="github.com/natesales/q"
-COMMIT_ID="8e9f6cc3f67b711a8e657235f80fc42e2165a70f"
+COMMIT_ID="20119b4c88d1af96acd0a4c4dceb3082c80d28c3"
 
 inherit go-module
 
