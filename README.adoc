@@ -1,0 +1,83 @@
+= personal gentoo overlay
+:toc:
+
+== Main
+
+This is my private and unofficial https://git.holgersson.xyz/foss/holgersson-overlay[overlay] for Gentoo/Linux.
+There will be different ebuilds from different sources, hopefully only temporary before submitting to the https://bugs.gentoo.org[main Gentoo bugtracker] resp. to the https://packages.gentoo.org/[main portage tree].
+
+== Setup and synchronisation
+
+There are several possible ways of adding this overlay:
+
+=== Adding the overlay manually
+
+You can clone the repository and create `/etc/portage/repos.conf/holgersson-overlay.conf` with the following contents:
+
+[source,ini]
+----
+[holgersson-overlay]
+priority = 50
+location = /path/to/local/holgersson-overlay
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/holgersson-overlay.git
+----
+
+=== Using eselect-repository
+
+Run eselect repository from `app-eselect/eselect-repository`:
+
+[source,shell]
+----
+$ eselect repository enable holgersson-overlay
+----
+
+=== Using layman
+
+Run layman from `app-portage/layman`:
+
+[source,shell]
+----
+$ layman -a holgersson-overlay
+----
+
+and optional for global updates:
+
+[source,shell]
+----
+$ layman -S
+$ emerge --sync
+----
+
+You might want to set `USE="sync-plugin-portage"` for layman, too.
+
+=== Add the distfiles archive to GENTOO_MIRRORS
+
+You may want to optionally add the distfiles mirror of this overlay to your GENTOO_MIRRORS configuration in /etc/portage:
+
+[source,shell]
+----
+GENTOO_MIRRORS="... https://files.holgersson.xyz/gentoo/distfiles/ ..."
+----
+
+The distfiles are updated daily using the tool `emirrordist` out of the portage package:
+
+[source,shell]
+----
+emirrordist --delete --mirror --repo holgersson-overlay --distfiles <path to webroot>
+----
+
+== Maintainer
+
+If you encounter bugs, please send a mail to *holgersson [ascii-symbol-64] posteo [ascii-symbol-46] de* or open a bug report on the https://bugs.gentoo.org[main Gentoo bugtracker] (please remember to Cc me there).
+Bug descriptions, suggestions, patches, critics and chorus of praise are all welcome!
+
+GPG key ID: *0x8AD9 60BB A57A F797 88CC FEC0 3CAA 2CA5 14E4 EE5E*
+
+== License and copying
+
+* The contents of this document are licensed under the [.title-ref]#CC-BY-SA-3.0 license#. The ebuilds are licensed under the [.title-ref]#GNU General Public License v2# for compability with the main Gentoo/portage tree.
+* Source files might have different licenses; these should be outlined in the ebuilds themselves.
+* The licenses are choosen to fit into the main gentoo licenses pool; if you suggest other licenses, or think I’m mistaken in the licenses I indicate anywhere please contact me / the maintainer (see the resp. section above)!
+
+// vim:syntax=asciidoc:fileencoding=utf-8:ts=4:expandtab:linebreak:wrap
