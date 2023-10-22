@@ -14,6 +14,15 @@ IUSE=""
 
 BDEPEND="app-crypt/sequoia-sq"
 
+src_prepare() {
+	default
+
+	# On non-systemd installations the service files are thrown
+	# directly into /. Hard-code the path as a quick and dirty solution.
+	# If it breaks for someone else, please complain, too and I'll revert it.
+	sed -i "s#\$\(shell pkgconf --variable systemd_system_unit_dir systemd\)#/usr/lib/systemd/system#" Makefile || die
+}
+
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 }
