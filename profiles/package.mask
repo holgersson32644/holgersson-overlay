@@ -4,16 +4,3 @@
 # author <email address> (LANG=C date -u +"%Y-%m-%d)
 # reason
 #
-# Nils Freydank <holgersson@posteo.de> (2023-09-07)
-# I finally gave up on packaging vim and neovim related plugins
-# and switched to https://nvchad.com.
-# Therefore I discontinue packaging any of the vim related packages.
-# Removal after 2023-10-07.
-app-vim/neoformat
-app-vim/nvim-cmp
-app-vim/nvim-lspconfig
-app-vim/nvim-tree-sitter
-app-vim/vim-obsession
-app-vim/vim-redacted
-app-vim/vim-vsnip
-app-vim/visual-multi
