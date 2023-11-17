@@ -4,7 +4,10 @@
 EAPI="8"
 
 DESCRIPTION="Bash scripts to make ssh more convenient"
-HOMEPAGE="https://github.com/vaporup/ssh-tools"
+HOMEPAGE="
+	https://github.com/vaporup/ssh-tools
+	https://codeberg.org/vaporup/ssh-tools
+"
 SRC_URI="https://github.com/vaporup/ssh-tools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
