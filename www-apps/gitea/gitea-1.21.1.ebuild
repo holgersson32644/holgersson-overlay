@@ -8,7 +8,7 @@ inherit go-module systemd tmpfiles
 MY_PV="${PV/_rc/-rc}"
 DESCRIPTION="A painless self-hosted Git service"
 HOMEPAGE="
-	https://gitea.io
+	https://about.gitea.com/
 	https://github.com/go-gitea/gitea
 "
 
