@@ -8,7 +8,10 @@ inherit cmake
 S="${WORKDIR}/SiriKali-${PV}"
 
 DESCRIPTION="A Qt/C++ GUI front end to some encrypted filesystems and sshfs"
-HOMEPAGE="https://github.com/mhogomchungu/sirikali"
+HOMEPAGE="
+	https://mhogomchungu.github.io/sirikali/
+	https://github.com/mhogomchungu/sirikali
+"
 SRC_URI="https://github.com/mhogomchungu/${PN}/releases/download/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2+"
