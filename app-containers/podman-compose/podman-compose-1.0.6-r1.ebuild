@@ -32,7 +32,11 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	app-containers/dnsname
+	|| (
+		app-containers/aardvark-dns
+		app-containers/netavark
+		app-containers/dnsname
+	)
 	app-containers/podman
 	dev-python/python-dotenv[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
