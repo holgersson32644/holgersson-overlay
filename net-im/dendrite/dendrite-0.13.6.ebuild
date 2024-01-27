@@ -20,6 +20,7 @@ fi
 # 2) Compress the archive using XZ limiting decompression memory for
 #    pretty constraint systems.
 # Use something like:
+# GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
 # tar cf $P-deps.tar go-mod \
 #       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
 # xz -k -9eT0 --memlimit-decompress=256M $P-deps.tar
