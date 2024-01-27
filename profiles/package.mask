@@ -13,3 +13,10 @@
 #
 # Removal after 2024-02-01.
 app-containers/dnsname
+
+# Nils Freydank <holgersson@posteo.de> (2024-01-27)
+# Does not work fully on my machines
+# - which might be a packaging error by myself.
+#
+# Removal after 2024-02-27.
+app-containers/podman-compose
