@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>vowstar@gmail.com</email>
-		<name>Huang Rui</name>
+		<email>holgersson@posteo.de</email>
+		<name>Nils Freydank</name>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">jessedoyle/prawn-icon</remote-id>
