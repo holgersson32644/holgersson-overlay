@@ -7,7 +7,7 @@
 		<doc>https://archlinux.org/pacman/</doc>
 	</upstream>
 	<maintainer type="person">
-		<email>holgersson@posteo.de</email>
+		<email>nils.freydank@posteo.de</email>
 		<name>Nils Freydank</name>
 	</maintainer>
 	<slots>

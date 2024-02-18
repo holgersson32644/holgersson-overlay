@@ -5,7 +5,7 @@
 		<remote-id type="github">containers/dnsname</remote-id>
 	</upstream>
 	<maintainer type="person">
-		<email>holgersson@posteo.de</email>
+		<email>nils.freydank@posteo.de</email>
 		<name>Nils Freydank</name>
 	</maintainer>
 </pkgmetadata>
