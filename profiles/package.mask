@@ -20,3 +20,11 @@ app-containers/dnsname
 #
 # Removal after 2024-02-27.
 app-containers/podman-compose
+
+# Nils Freydank
+# The ebuild in-tree got several improvements over my "fork".
+# Using filecaps there still bothers me, but I don't care
+# anymore and drop the copy from this overlay.
+# 
+# Removal after 2024-02-29.
+www-apps/gitea
