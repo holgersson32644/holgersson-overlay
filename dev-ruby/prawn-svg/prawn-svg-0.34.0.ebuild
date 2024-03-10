@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,12 +21,14 @@ IUSE=""
 RESTRICT="test"
 
 ruby_add_rdepend "
-	>=dev-ruby/css_parser-1.6.0
-	>=dev-ruby/prawn-0.11.1
-	>=dev-ruby/rexml-3.2.0
-	"
+	dev-ruby/css_parser
+	dev-ruby/prawn
+	dev-ruby/rexml
+"
 
-ruby_add_bdepend "test? ( dev-ruby/mocha
-	>=dev-ruby/pdf-inspector-1.1.0
-	>=dev-ruby/pdf-reader-1.2
-	)"
+ruby_add_bdepend "test? (
+	dev-ruby/mocha
+	dev-ruby/pdf-inspector
+	dev-ruby/pdf-reader
+	)
+"
