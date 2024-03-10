@@ -22,21 +22,22 @@ KEYWORDS="~amd64 ~x86"
 BDEPEND="test? ( app-text/poppler )"
 
 ruby_add_rdepend "
-	>=dev-ruby/asciidoctor-2.0
-	>=dev-ruby/concurrent-ruby-1.1
-	>=dev-ruby/matrix-0.4
-	>=dev-ruby/prawn-2.4.0
-	>=dev-ruby/prawn-icon-3.0.0
-	>=dev-ruby/prawn-svg-0.32.0
-	>=dev-ruby/prawn-table-0.2.0
-	>=dev-ruby/prawn-templates-0.1.0
-	>=dev-ruby/treetop-1.6.0
-	"
+	dev-ruby/asciidoctor
+	dev-ruby/concurrent-ruby
+	dev-ruby/matrix
+	dev-ruby/prawn
+	dev-ruby/prawn-icon
+	dev-ruby/prawn-svg
+	dev-ruby/prawn-table
+	dev-ruby/prawn-templates
+	dev-ruby/treetop
+"
 ruby_add_bdepend "test? (
-	>=dev-ruby/chunky_png-1.4.0
-	>=dev-ruby/coderay-1.1.0
-	>=dev-ruby/pdf-inspector-1.3.0
-)"
+	dev-ruby/chunky_png
+	dev-ruby/coderay
+	dev-ruby/pdf-inspector
+)
+"
 
 all_ruby_prepare() {
 	rm Gemfile || die
