@@ -1,11 +1,11 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 
 DESCRIPTION="GnuPG keyring of Archlinux developer keys"
-HOMEPAGE="https://gitlab.archlinux.org/archlinux/archlinux-keyring"
-SRC_URI="https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/archive/${PV}/archlinux-keyring-${PV}.tar.gz"
+HOMEPAGE="https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/releases"
+SRC_URI="https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/releases/${PV}/downloads/archlinux-keyring-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
