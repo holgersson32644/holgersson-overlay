@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,13 +6,16 @@ EAPI="8"
 inherit meson
 
 DESCRIPTION="Archlinux's binary package manager"
-HOMEPAGE="https://archlinux.org/pacman/ https://archlinux.org/packages/core/x86_64/pacman/"
+HOMEPAGE="
+	https://archlinux.org/pacman/
+	https://gitlab.archlinux.org/pacman/pacman/-/releases
+"
 
 if [[ "${PV}" == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.archlinux.org/pacman/pacman"
 else
-	SRC_URI="https://sources.archlinux.org/other/pacman/${P}.tar.xz"
+	SRC_URI="https://gitlab.archlinux.org/pacman/pacman/-/releases/v${PV}/downloads/${P}.tar.xz"
 	# Do *not* re-add ~x86!
 	# https://www.archlinux.org/news/phasing-out-i686-support/
 	KEYWORDS="-* ~amd64"
@@ -25,7 +28,7 @@ IUSE="doc +gpg test"
 DEPEND="
 	app-crypt/archlinux-keyring
 	app-arch/libarchive:=[lzma]
-	gpg? ( >=app-crypt/gpgme-1.13.0:= )
+	gpg? ( app-crypt/gpgme:= )
 	net-misc/curl
 	dev-libs/openssl:0=
 	virtual/libiconv
