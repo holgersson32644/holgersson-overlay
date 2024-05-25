@@ -8,11 +8,3 @@
 # I don't use that matrix client anymore.
 # Removal after 2024-05-15.
 net-im/gomuks
-
-# Nils Freydank <nils.freydank@posteo.de> (2024-04-14)
-# As app services start to fail and developement stalled
-# to some degree I will switch to synapse (or give up).
-# Removal after 2024-05-15.
-acct-user/dendrite
-acct-group/dendrite
-net-im/dendrite
