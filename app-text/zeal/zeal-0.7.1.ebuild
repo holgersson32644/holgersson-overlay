@@ -6,7 +6,7 @@ EAPI=8
 inherit cmake xdg-utils
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="90ad776e83f182221cafd329f2e58cf0621ea3f1"
+COMMIT_ID="7f938cf4e87b22abc5efd4155b78ea8127eefc4b"
 
 DESCRIPTION="Offline documentation browser inspired by Dash"
 HOMEPAGE="
