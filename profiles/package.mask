@@ -1,5 +1,6 @@
 #-------------------------------------------
 # package.mask file for holgersson-overlay
 # syntax:
-# author <email address> (LANG=C date -u +"%Y-%m-%d)
-# reason
+# author <email address> (LANG=C date -u "+%Y-%m-%d")
+# <reason>
+# Removal after <LANG=C date -u -d1month "+%Y-%m-%d">.
