@@ -81,11 +81,16 @@ DOCS=(
 )
 
 src_compile() {
+	export CGO_ENABLE=1
+
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
+		-buildmode=pie
+		-mod readonly
+		-modcacherw
 		-ldflags="-X ${EGO_PN}/config.GitCommit=${GIT_COMMIT} -s -w"
-		-mod mod -v -work -x
+		-v -work -x
 		-tags "fts5"
 	)
 
