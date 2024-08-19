@@ -4,7 +4,7 @@
 EAPI="8"
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{11..12} )
+PYTHON_COMPAT=( python3_{12..13} )
 inherit distutils-r1 pypi
 
 DESCRIPTION="Python Control Systems Library"
@@ -16,13 +16,19 @@ HOMEPAGE="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-# Tests need nose which is getting cleaned from main tree.
-RESTRICT="test"
+KEYWORDS="~amd64"
+IUSE="test"
+RESTRICT="!test? ( test )"
 
 BDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/scipy[${PYTHON_USEDEP}]
+	dev-python/slycot[${PYTHON_USEDEP}]
+	test? (
+		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/pytest-timeout[${PYTHON_USEDEP}]
+		dev-util/ruff
+	)
 "
 RDEPEND="${DEPEND}"
