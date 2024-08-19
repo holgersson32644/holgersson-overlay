@@ -20,7 +20,7 @@ else
 	S="${WORKDIR}/fb-${PV}"
 fi
 
-#KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64"
 SLOT="0"
 IUSE="+clipboard"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

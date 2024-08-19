@@ -23,7 +23,7 @@ else
 		S="${WORKDIR}/$PN-${MY_PV}/"
 	fi
 fi
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 LICENSE="BSD-2"
 SLOT="0"

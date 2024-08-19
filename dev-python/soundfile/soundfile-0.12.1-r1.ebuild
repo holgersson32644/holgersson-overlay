@@ -24,7 +24,7 @@ else
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 	fi
 fi
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 LICENSE="PySoundFile-BSD-3"
 SLOT="0"

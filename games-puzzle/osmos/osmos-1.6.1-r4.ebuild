@@ -14,7 +14,7 @@ SRC_URI="${MY_P}.tar.gz"
 
 LICENSE="Hemisphere_Games-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64"
 IUSE=""
 
 RESTRICT="bindist fetch strip test"
@@ -46,12 +46,7 @@ src_install() {
 
 	# install all files to /opt/osmos, including the actual binary
 	exeinto "/opt/${PN}"
-	if use amd64
-		then newexe ${MY_PN}.bin64 ${PN}
-	fi
-	if use x86
-		then newexe ${MY_PN}.bin32 ${PN}
-	fi
+	newexe ${MY_PN}.bin64 ${PN}
 	insinto "/opt/${PN}"
 	doins -r Fonts/ Sounds/ Textures/ Osmos-* *.cfg
 

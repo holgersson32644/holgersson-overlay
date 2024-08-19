@@ -18,7 +18,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 IUSE="gnome-keyring kwallet test"
 RESTRICT="!test? ( test )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 DEPEND="
 	dev-libs/libgcrypt:0=
