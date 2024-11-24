@@ -4,3 +4,10 @@
 # author <email address> (LANG=C date -u "+%Y-%m-%d")
 # <reason>
 # Removal after <LANG=C date -u -d1month "+%Y-%m-%d">.
+
+# Nils Freydank <nils.freydank@posteo.de> (2024-11-24)
+# Pacman 7.x is out, I don't have time to do the bump.
+# Besides, I don't use it anymore.
+# Removal after 2024-12-24.
+sys-apps/pacman
+sys-apps/pacman-mirrorlist
