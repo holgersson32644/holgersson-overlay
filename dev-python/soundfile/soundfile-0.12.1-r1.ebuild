@@ -24,10 +24,10 @@ else
 		S="${WORKDIR}/python-${PN}-${COMMIT_ID}"
 	fi
 fi
-KEYWORDS="~amd64"
 
 LICENSE="PySoundFile-BSD-3"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="test"
 # Some tests result in sandbox violations.
 RESTRICT="test"
