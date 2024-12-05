@@ -1,4 +1,4 @@
-# Copyright 2019-2023 Gentoo Authors
+# Copyright 2019-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
@@ -12,6 +12,8 @@ MY_PV="${PV/_/-}"
 
 DESCRIPTION="Encrypted overlay filesystem written in Go"
 HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/"
+
+S="${WORKDIR}/${PN}_v${MY_PV}_src-deps"
 
 if [[ "${PV}" = 9999* ]]; then
 	EGIT_REPO_URI="https://${EGO_PN}"
@@ -43,8 +45,6 @@ RDEPEND="
 	sys-fs/fuse
 	ssl? ( dev-libs/openssl:0= )
 "
-
-S="${WORKDIR}/${PN}_v${MY_PV}_src-deps"
 
 # We omit debug symbols which looks like pre-stripping to portage.
 QA_PRESTRIPPED="
