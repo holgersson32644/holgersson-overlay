@@ -1,14 +1,14 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 EGO_PN="github.com/natesales/q"
-COMMIT_ID=""
+COMMIT_ID="0ca9b8b13fc69121144d85365c16b3e21508ffc3"
 
 inherit go-module
 
-HOMEPAGE="https://github.com/natesales/q"
 DESCRIPTION="DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH"
+HOMEPAGE="https://github.com/natesales/q"
 
 if [[ ${PV} == *_p* ]]; then
 	SRC_URI="https://${EGO_PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
@@ -29,15 +29,9 @@ fi
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
 
 MY_PN="q-dns"
-KEYWORDS="~amd64"
 LICENSE="AGPL-3 Apache-2.0 BSD BSD-2 GPL-3 MIT"
-
 SLOT="0"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
+KEYWORDS="~amd64"
 
 src_compile() {
 	export CGO_ENABLED=0
