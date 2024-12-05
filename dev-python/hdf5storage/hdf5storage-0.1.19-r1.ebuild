@@ -1,4 +1,4 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -21,9 +21,7 @@ IUSE="doc"
 # Tests need nose which is getting cleaned from main tree.
 RESTRICT="test"
 
-DEPEND=""
 RDEPEND="
-	${DEPEND}
 	dev-python/h5py[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 "
