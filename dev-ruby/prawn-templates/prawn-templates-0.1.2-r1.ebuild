@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,6 @@ HOMEPAGE="https://github.com/prawnpdf/prawn-templates"
 LICENSE="|| ( GPL-2+ GPL-3 Ruby )"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 # prawn breaks tests for some reasons, needs to be investigated; code
 # still works though.
