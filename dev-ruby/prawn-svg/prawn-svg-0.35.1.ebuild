@@ -14,7 +14,6 @@ HOMEPAGE="https://github.com/mogest/prawn-svg"
 LICENSE="|| ( MIT Ruby )"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 # prawn breaks tests for some reasons, needs to be investigated; code
 # still works though.
