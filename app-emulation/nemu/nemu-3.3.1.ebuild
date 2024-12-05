@@ -10,6 +10,7 @@ COMMIT_ID="8bcf47fa424458bbff798a8b5409a0f8d905f0e5"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
+LICENSE="BSD-2"
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/nemuTUI/${PN}.git"
@@ -23,10 +24,8 @@ else
 		S="${WORKDIR}/$PN-${MY_PV}/"
 	fi
 fi
-KEYWORDS="~amd64"
-
-LICENSE="BSD-2"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="dbus network-map +ovf remote-control spice +usb +vnc-client"
 
 RDEPEND="
