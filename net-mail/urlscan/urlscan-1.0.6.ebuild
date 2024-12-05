@@ -18,11 +18,9 @@ SRC_URI+=" https://raw.githubusercontent.com/firecat53/urlscan/${PV}/urlscan.1 -
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="dev-python/urwid[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 DOCS=( README.md )
 PATCHES=( "${FILESDIR}/${PN}-1.0.0-respect-paths.patch" )
