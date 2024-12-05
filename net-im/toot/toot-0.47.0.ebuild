@@ -28,4 +28,3 @@ DEPEND="
 	dev-python/wcwidth[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
