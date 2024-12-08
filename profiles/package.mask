@@ -13,3 +13,15 @@
 app-crypt/archlinux-keyring
 sys-apps/pacman
 sys-apps/pacman-mirrorlist
+
+# Nils Freydank <nils.freydank@posteo.de> (2024-12-08)
+# I don't use the software anymore.
+# Open issues:
+#  - not ported to numpy 2 yet:
+#    https://github.com/frejanordsiek/hdf5storage/pull/134
+#  - test framework was switched to numpy from nose,
+#    but there is no release yet
+#  - some tests need julia, some matlab
+#  - upstream seems inactive
+# Removal after 2025-01-08.
+dev-python/hdf5storage
