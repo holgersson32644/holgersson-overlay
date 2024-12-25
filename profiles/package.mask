@@ -25,3 +25,8 @@ sys-apps/pacman-mirrorlist
 #  - upstream seems inactive
 # Removal after 2025-01-08.
 dev-python/hdf5storage
+
+# Nils Freydank <nils.freydank@posteo.de> (2024-12-25)
+# I don't use the software anymore.
+# Removal after 2025-01-25.
+dev-python/multi_key_dict
