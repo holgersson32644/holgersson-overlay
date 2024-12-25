@@ -8,6 +8,7 @@
 	<use>
 		<flag name="kwallet">Enable support for storing passwords in kwallet</flag>
 		<flag name="gnome-keyring">Enable support for storing passowrds in gnome-keyring</flag>
+		<flag name="pwquality">Use <pkg>dev-libs/libpwquality</pkg> to check against password policies</flag>
 	</use>
 	<longdescription>
 		SiriKali is a Qt/C++ GUI frontend to cryfs, gocryptfs, securefs, ecryptfs and encfs.
