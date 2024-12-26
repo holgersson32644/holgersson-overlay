@@ -19,9 +19,7 @@ if [[ "${PV}" = 9999* ]]; then
 	EGIT_REPO_URI="https://${EGO_PN}"
 	inherit git-r3
 else
-	SRC_URI="
-		https://${EGO_PN}/releases/download/v${MY_PV}/${PN}_v${MY_PV}_src-deps.tar.gz -> ${P}.tar.gz
-	"
+	SRC_URI="https://${EGO_PN}/releases/download/v${MY_PV}/${PN}_v${MY_PV}_src-deps.tar.gz -> ${P}.tar.gz"
 fi
 
 # in detail:
@@ -73,7 +71,7 @@ src_compile() {
 		-ldflags "${myldflags[*]}"
 		-tags "$(usex !ssl 'without_openssl' 'none')"
 	)
-	go build "${mygoargs[@]}" || die
+	ego build "${mygoargs[@]}"
 
 	# loop over all helper tools
 	for dir in gocryptfs-xray contrib/statfs contrib/findholes contrib/atomicrename; do
