@@ -35,14 +35,13 @@ KEYWORDS="~amd64"
 
 src_compile() {
 	export CGO_ENABLED=0
-
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
-		-ldflags="-X ${EGO_PN}/config.GitCommit=${COMMIT_ID} -s -w"
+		-ldflags="-X ${EGO_PN}/config.GitCommit=${COMMIT_ID} -w -s"
 		-mod mod -v -work -x
 	)
-	go build  "${mygobuildargs[@]}" . || die "go build failed"
+	ego build  "${mygobuildargs[@]}" .
 }
 
 src_install() {
