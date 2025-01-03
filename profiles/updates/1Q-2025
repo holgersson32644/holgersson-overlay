@@ -1,0 +1,1 @@
+move sys-fs/gocryptfs app-crypt/gocryptfs
