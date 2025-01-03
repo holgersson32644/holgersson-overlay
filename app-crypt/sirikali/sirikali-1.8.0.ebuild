@@ -15,8 +15,8 @@ S="${WORKDIR}/SiriKali-${PV}"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="gnome-keyring kwallet +pwquality test"
 KEYWORDS="~amd64"
+IUSE="gnome-keyring kwallet +pwquality test"
 RESTRICT="!test? ( test )"
 
 DEPEND="
