@@ -17,3 +17,7 @@ dev-python/multi_key_dict
 # Removal after 2025-01-14.
 dev-libs/olm
 
+# Nils Freydank <nils.freydank@posteo.de> (2025-01-13)
+# I don't use the software anymore.
+# Removal after 2025-02-13.
+net-vpn/headscale
