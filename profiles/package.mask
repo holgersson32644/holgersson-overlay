@@ -5,15 +5,6 @@
 # <reason>
 # Removal after <LANG=C date -u -d1month "+%Y-%m-%d">.
 
-# Nils Freydank <nils.freydank@posteo.de> (2024-11-24)
-# Pacman 7.x is out, I don't have time to do the bump.
-# Besides, I don't use it anymore.
-# 2024-12-05: Adding archlinux-keyring.
-# Removal after 2025-01-05.
-app-crypt/archlinux-keyring
-sys-apps/pacman
-sys-apps/pacman-mirrorlist
-
 # Nils Freydank <nils.freydank@posteo.de> (2024-12-08)
 # I don't use the software anymore.
 # Open issues:
