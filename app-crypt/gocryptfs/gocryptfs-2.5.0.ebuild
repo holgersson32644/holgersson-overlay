@@ -1,4 +1,4 @@
-# Copyright 2019-2024 Gentoo Authors
+# Copyright 2019-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: For distfiles verification see https://nuetzlich.net/gocryptfs/releases.
@@ -13,25 +13,14 @@ MY_PV="${PV/_/-}"
 DESCRIPTION="Encrypted overlay filesystem written in Go"
 HOMEPAGE="https://nuetzlich.net/gocryptfs/ https://github.com/rfjakob/gocryptfs/"
 
-S="${WORKDIR}/${PN}_v${MY_PV}_src-deps"
-
 if [[ "${PV}" = 9999* ]]; then
 	EGIT_REPO_URI="https://${EGO_PN}"
 	inherit git-r3
 else
 	SRC_URI="https://${EGO_PN}/releases/download/v${MY_PV}/${PN}_v${MY_PV}_src-deps.tar.gz -> ${P}.tar.gz"
 fi
-
-# in detail:
-# BSD           vendor/golang.org/x/sys/LICENSE
-# BSD           vendor/golang.org/x/crypto/LICENSE
-# BSD           vendor/github.com/hanwen/go-fuse/v2/LICENSE
-# Apache-2.0    vendor/github.com/jacobsa/crypto/LICENSE
-# BSD-2         vendor/github.com/pkg/xattr/LICENSE
-# MIT           vendor/github.com/rfjakob/eme/LICENSE
-# MIT           vendor/github.com/sabhiram/go-gitignore/LICENSE
+S="${WORKDIR}/${PN}_v${MY_PV}_src-deps"
 LICENSE="Apache-2.0 BSD BSD-2 MIT"
-
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug +man pie +ssl"
@@ -43,17 +32,8 @@ RDEPEND="
 	sys-fs/fuse
 	ssl? ( dev-libs/openssl:0= )
 "
-
-# We omit debug symbols which looks like pre-stripping to portage.
-QA_PRESTRIPPED="
-	/usr/bin/gocryptfs-atomicrename
-	/usr/bin/gocryptfs-findholes
-	/usr/bin/gocryptfs-statfs
-	/usr/bin/gocryptfs-xray
-	/usr/bin/gocryptfs
-"
-
 src_compile() {
+	export CGO_ENABLED=1
 	export GOPATH="${G}"
 	export CGO_CFLAGS="${CFLAGS}"
 	export CGO_LDFLAGS="${LDFLAGS}"
@@ -61,7 +41,7 @@ src_compile() {
 		"$(usex !debug '-s -w' '')"
 		-X "main.GitVersion=v${PV}"
 		-X "'main.GitVersionFuse=[vendored]'"
-		-X "main.BuildDate=$(date -u '+%Y-%m-%d')"
+		-X "main.BuildDate=$(date --utc '+%Y-%m-%d')"
 	)
 	local mygoargs=(
 		-v -work -x
@@ -76,7 +56,7 @@ src_compile() {
 	# loop over all helper tools
 	for dir in gocryptfs-xray contrib/statfs contrib/findholes contrib/atomicrename; do
 		cd "${S}/${dir}" || die
-		go build "${mygoargs[@]}" || die
+		ego build "${mygoargs[@]}"
 	done
 	cd "${S}"
 
