@@ -10,13 +10,6 @@
 # Removal after 2025-01-25.
 dev-python/multi_key_dict
 
-# Nils Freydank <nils.freydank@posteo.de> (2025-01-03)
-# Abandoned by upstream:
-# https://gitlab.matrix.org/matrix-org/olm/-/commit/6d4b5b07887821a95b144091c8497d09d377f985
-# A migration to "vodozemac" is recommended.
-# Removal after 2025-01-14.
-dev-libs/olm
-
 # Nils Freydank <nils.freydank@posteo.de> (2025-01-19)
 # I don't use the software anymore.
 # Removal after 2025-02-19.
