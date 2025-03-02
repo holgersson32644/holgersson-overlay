@@ -5,7 +5,3 @@
 # <reason>
 # Removal after <LANG=C date -u -d1month "+%Y-%m-%d">.
 
-# Nils Freydank <nils.freydank@posteo.de> (2025-01-19)
-# I don't use the software anymore.
-# Removal after 2025-02-19.
-app-misc/fff
