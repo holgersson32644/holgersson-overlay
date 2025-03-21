@@ -4,7 +4,7 @@
 EAPI="8"
 EGO_PN="github.com/zk-org/zk"
 inherit go-module
-COMMIT_ID="bf4800b52ceeab479a446dcb8b9ea63aad4dc36b"
+COMMIT_ID="dfacbd76f942db602c6b6b403baa3d00c29fbfda"
 
 DESCRIPTION="A plain text note-taking assistant"
 HOMEPAGE="https://github.com/zk-org/zk"
