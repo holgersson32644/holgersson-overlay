@@ -5,4 +5,7 @@
 		<email>nils.freydank@posteo.de</email>
 		<name>Nils Freydank</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">Macmod/godap</remote-id>
+	</upstream>
 </pkgmetadata>
