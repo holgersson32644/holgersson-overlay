@@ -3,7 +3,8 @@
 
 EAPI="8"
 EGO_PN="github.com/Macmod/godap"
-COMMIT_ID="7c9d56658ad4216589cd3c12738feb7d1804acdc"
+
+COMMIT_ID="8b44193847414ab03ff63b07c782af8eb438ff3f"
 
 inherit go-module
 
