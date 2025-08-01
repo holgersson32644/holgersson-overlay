@@ -24,7 +24,9 @@ RESTRICT="test"
 DEPEND="
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/term-image[${PYTHON_USEDEP}]
 	dev-python/urwid[${PYTHON_USEDEP}]
+	dev-python/urwidgets[${PYTHON_USEDEP}]
 	dev-python/wcwidth[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
