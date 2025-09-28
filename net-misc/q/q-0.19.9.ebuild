@@ -1,9 +1,9 @@
-# Copyright 2022-2024 Gentoo Authors
+# Copyright 2022-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 EGO_PN="github.com/natesales/q"
-COMMIT_ID="0ca9b8b13fc69121144d85365c16b3e21508ffc3"
+COMMIT_ID="3f3ae8d2a8d58aed559f1b6be27e76f1e669d1d9"
 
 inherit go-module
 
