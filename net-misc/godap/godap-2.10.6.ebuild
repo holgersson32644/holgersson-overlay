@@ -3,8 +3,7 @@
 
 EAPI="8"
 EGO_PN="github.com/Macmod/godap"
-
-COMMIT_ID="8b44193847414ab03ff63b07c782af8eb438ff3f"
+COMMIT_ID="78a3848b23c7fb1f4d5e821715849fa90c8d652c"
 
 inherit go-module
 
@@ -26,7 +25,7 @@ fi
 # GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
 # tar cf $P-deps.tar go-mod \
 #       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
-# xz -k -9eT0 --memlimit-decompress=8192M $P-deps.tar
+# xz -k -9eT0 --memlimit-decompress=8192M "${P}-deps.tar"
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
 
 LICENSE="Apache-2.0 BSD MIT"
