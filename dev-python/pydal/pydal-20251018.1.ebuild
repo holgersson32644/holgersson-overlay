@@ -13,7 +13,6 @@ inherit distutils-r1 pypi
 DESCRIPTION="pyDAL is a pure Python Database Abstraction Layer"
 HOMEPAGE="
 	https://pypi.org/project/pydal/
-	https://github.com/web2py/pydal
 "
 
 LICENSE="BSD"
