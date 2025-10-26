@@ -24,8 +24,7 @@ BDEPEND="test? ( app-text/poppler )"
 ruby_add_rdepend "
 	dev-ruby/asciidoctor
 	dev-ruby/concurrent-ruby
-	dev-ruby/matrix
-	dev-ruby/prawn
+	>=dev-ruby/prawn-2.5.0
 	dev-ruby/prawn-icon
 	dev-ruby/prawn-svg
 	dev-ruby/prawn-table
