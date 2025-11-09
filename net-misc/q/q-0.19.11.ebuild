@@ -3,7 +3,7 @@
 
 EAPI="8"
 EGO_PN="github.com/natesales/q"
-COMMIT_ID="3f3ae8d2a8d58aed559f1b6be27e76f1e669d1d9"
+COMMIT_ID="4b54702e6b56b48c8e9ee1f30d06e7aa487a9891"
 
 inherit go-module
 
@@ -23,9 +23,9 @@ fi
 #    pretty constraint systems.
 # Use something like:
 # GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
-# tar cf $P-deps.tar go-mod \
+# tar cf "${P}-deps.tar" go-mod \
 #       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
-# xz -k -9eT0 --memlimit-decompress=256M $P-deps.tar
+# xz -k -9eT0 --memlimit-decompress=256M "${P}-deps.tar"
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
 
 MY_PN="q-dns"
