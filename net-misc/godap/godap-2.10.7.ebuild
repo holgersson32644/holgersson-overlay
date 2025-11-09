@@ -3,7 +3,7 @@
 
 EAPI="8"
 EGO_PN="github.com/Macmod/godap"
-COMMIT_ID="78a3848b23c7fb1f4d5e821715849fa90c8d652c"
+COMMIT_ID="1fb29dbd66452d32397ac68269d3a987c2a2f2ee"
 
 inherit go-module
 
@@ -23,7 +23,7 @@ fi
 #    pretty constraint systems.
 # Use something like:
 # GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
-# tar cf $P-deps.tar go-mod \
+# tar cf "${P}-deps.tar" go-mod \
 #       --mtime="1970-01-01" --sort=name --owner=portage --group=portage
 # xz -k -9eT0 --memlimit-decompress=8192M "${P}-deps.tar"
 SRC_URI+=" https://files.holgersson.xyz/gentoo/distfiles/golang-pkg-deps/${P}-deps.tar.xz"
