@@ -4,8 +4,3 @@
 # author <email address> (LANG=C date -u "+%Y-%m-%d")
 # <reason>
 # Removal after <LANG=C date -u -d1month "+%Y-%m-%d">.
-
-# Nils Freydank <nils.freydank@posteo.de> (2025-10-05)
-# Package was nice, but does not build with >=cmake-4.0 and "modern C".
-# Removal after 2025-11-05.
-media-gfx/catimg
