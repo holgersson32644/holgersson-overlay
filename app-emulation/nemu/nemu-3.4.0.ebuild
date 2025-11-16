@@ -1,4 +1,4 @@
-# Copyright 2020-2024 Gentoo Authors
+# Copyright 2020-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -6,7 +6,7 @@ EAPI="8"
 inherit cmake linux-info
 
 MY_PV="${PV/_rc/-RC}"
-COMMIT_ID="8bcf47fa424458bbff798a8b5409a0f8d905f0e5"
+COMMIT_ID="3a26539bb2e63dd908a8c7460fe063ca78a039f6"
 
 DESCRIPTION="ncurses interface for QEMU"
 HOMEPAGE="https://github.com/nemuTUI/nemu"
@@ -72,6 +72,7 @@ src_configure() {
 	# -DNM_WITH_NCURSES: Don't build the embbeded ncurses.
 	# -DNM_WITH_QEMU: Don't build the embbeded qemu.
 	local mycmakeargs=(
+		# This dir is relative to "${HOME}".
 		-DNM_DEFAULT_DBFILE=".local/share/nemu/nemu.db"
 		-DNM_DEFAULT_VMDIR="nemu_vm"
 		-DNM_WITH_NCURSES=off
