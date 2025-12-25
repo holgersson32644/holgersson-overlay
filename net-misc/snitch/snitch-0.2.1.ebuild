@@ -3,7 +3,7 @@
 
 EAPI=8
 EGO_PN="github.com/karol-broda/snitch"
-COMMIT_ID="6d6d057675ba67627826b2383221e00a3fe742fe"
+COMMIT_ID="d792e10d3c13d9e69c67a7554a1cab9cf49196a8"
 
 inherit go-module shell-completion
 
