@@ -5,7 +5,7 @@ EAPI=8
 EGO_PN="github.com/karol-broda/snitch"
 COMMIT_ID="6d6d057675ba67627826b2383221e00a3fe742fe"
 
-inherit go-module
+inherit go-module shell-completion
 
 DESCRIPTION="A prettier way to inspect network connections"
 HOMEPAGE="https://github.com/karol-broda/snitch"
@@ -44,8 +44,20 @@ src_compile() {
 		-mod mod -v -work -x
 	)
 	ego build  "${mygobuildargs[@]}" .
+
+	# inspired by dev-vcs/git-lfs ;)
+	./snitch completion bash > "${PN}.bash" || die
+	./snitch completion fish > "${PN}.fish" || die
+	./snitch completion zsh > "${PN}.zsh" || die
 }
 
 src_install() {
 	dobin "${PN}"
+
+	einstalldocs
+
+	# Install auto-completion scripts generated earlier.
+	newbashcomp "${PN}.bash" "${PN}"
+	dofishcomp "${PN}.fish"
+	newzshcomp "${PN}.zsh" "_${PN}"
 }
