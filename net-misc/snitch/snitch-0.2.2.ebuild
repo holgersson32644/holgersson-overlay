@@ -3,7 +3,7 @@
 
 EAPI=8
 EGO_PN="github.com/karol-broda/snitch"
-COMMIT_ID="d792e10d3c13d9e69c67a7554a1cab9cf49196a8"
+COMMIT_ID="df15770a94381ebbf2b04075273458b617e7ced6"
 
 inherit go-module shell-completion
 
@@ -32,6 +32,15 @@ LICENSE="Apache-2.0 BSD MIT MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
+src_prepare() {
+	default
+
+	sed -i \
+		-e "s/Version = \"dev\"/Version = \"${PV} (Gentoo\/Linux, holgersson-overlay)\"/" \
+		-e "s/Commit  = \"none\"/Commit  = \"${COMMIT_ID}\"/" \
+		cmd/version.go || die
+}
+
 src_compile() {
 	# Upstream actually links against libresolv
 	# and some other parts of libc (glic?).
@@ -40,7 +49,7 @@ src_compile() {
 	# Flags -w, -s: Omit debugging information to reduce binary size,
 	# see https://golang.org/cmd/link/.
 	local mygobuildargs=(
-		-ldflags="-X ${EGO_PN}/config.GitCommit=${COMMIT_ID} -w -s"
+		-ldflags="-w -s"
 		-mod mod -v -work -x
 	)
 	ego build  "${mygobuildargs[@]}" .
