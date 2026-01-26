@@ -43,7 +43,7 @@ You may want to optionally add the distfiles mirror of this overlay to your GENT
 
 [source,shell]
 ----
-GENTOO_MIRRORS="... https://files.holgersson.xyz/gentoo/distfiles/ ..."
+GENTOO_MIRRORS="... https://files.holgersson.xyz/gentoo/distfiles/holgersson-overlay ..."
 ----
 
 The distfiles are updated daily using the tool `emirrordist` out of the portage package:
