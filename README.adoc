@@ -1,4 +1,5 @@
 = personal gentoo overlay
+// vim:syntax=asciidoc:fileencoding=utf-8:ts=4:expandtab:linebreak:wrap
 :toc:
 
 == Main
@@ -66,4 +67,3 @@ GPG key ID: *0x8AD9 60BB A57A F797 88CC FEC0 3CAA 2CA5 14E4 EE5E*
 * Source files might have different licenses; these should be outlined in the ebuilds themselves.
 * The licenses are choosen to fit into the main gentoo licenses pool; if you suggest other licenses, or think I’m mistaken in the licenses I indicate anywhere please contact me / the maintainer (see the resp. section above)!
 
-// vim:syntax=asciidoc:fileencoding=utf-8:ts=4:expandtab:linebreak:wrap
