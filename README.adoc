@@ -20,7 +20,7 @@ You can clone the repository and create `/etc/portage/repos.conf/holgersson-over
 priority = 50
 location = /path/to/local/holgersson-overlay
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/holgersson-overlay.git
+sync-uri = https://git.holgersson.xyz/gentoo-related/holgersson-overlay
 # Optionally enable GPG signature verification,
 # but disable updates from wkd and keyrings:
 #sync-git-verify-commit-signature = true
